@@ -26,10 +26,6 @@ ui <- function(id) {
 #   Server
 #
 
-#' @param consensusSel      dataset processed by mod. unifier
-#' @param varsTable,        input from DT, to get row clicked. mod. Table
-#' @param varsCountry     , get coordinates of selected country. mod. Country
-
 #' @export
 server <- function(id,dataset_init,idx,vars_unifier) {
 

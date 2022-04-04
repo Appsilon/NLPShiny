@@ -119,7 +119,6 @@ ui <- function(id) {
                          ns = ns,
                          uiOutput(ns("servicetypeUI1"))
        )
-       # ,uiOutput("africaCountrySelect")
   )
   ,div(
        conditionalPanel(condition = "input.region_input == 2",

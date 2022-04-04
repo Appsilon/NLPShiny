@@ -66,7 +66,6 @@ aboutPage <- tagList(
 )
 
 #' @export
-
 mainPage <- tagList(
   div(class="grid-inside-up"
       , segment(
@@ -118,6 +117,5 @@ mainPage <- tagList(
 pages_menu  <- c(list(route("/", mainPage)
                  ,route("inputform",inputFormPage)
                  ,route("about",aboutPage)
-)
-)
+))
 

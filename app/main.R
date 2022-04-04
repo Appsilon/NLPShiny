@@ -44,35 +44,39 @@ box::use(
   app / view / unify,
 )
 
+#' @export
 router <- purrr::lift(make_router)(pages_menu)
 
-layout <- div(
-  class = "grid-container",
-  div(class = "header_left", header_left),
-  div(class = "header_right", header_right),
-  div(class = "sidenav", sidebar, id = "sidebar_id"),
-  div(class = "main", router$ui),
-  div(class = "footer", footer)
-)
-
+# layout <-
+hl51<<-header_left
 #' @export
-ui <- fluidPage(
+ui <- function(id) {
+  fluidPage(
   useShinyjs(),
   # tags$head(
   #   tags$link(href = "style.css", rel = "stylesheet", type = "text/css"),
   # ),
   shiny::tags$body(
-    # dir = "ltr",
-    layout
+    dir = "ltr",
+    div(
+      class = "grid-container",
+      div(class = "header_left", header_left),
+      div(class = "header_right", header_right),
+      div(class = "sidenav", sidebar, id = "sidebar_id"),
+      div(class = "main", router$ui),
+      div(class = "footer", footer)
+    )
   )
 )
+}
 
 #
 #   server
 #
 #' @export
-server <- function(input, output, session) {
-  router$server(input, output, session)
+server <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    router$server(input, output, session)
 
   #
   #   inputs
@@ -120,7 +124,5 @@ server <- function(input, output, session) {
   observeEvent(input$button, {
     shinyjs::toggle("sidebar_id")
   })
-}
 
-# shinyApp(ui, server)
-
+})}
