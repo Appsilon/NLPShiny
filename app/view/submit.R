@@ -23,7 +23,8 @@ box::use(
     br,
     observeEvent,
     actionButton,
-    reactiveValues
+    reactiveValues,
+    outputOptions
     ],
   shiny.semantic[
     split_layout,
@@ -188,6 +189,8 @@ server <- function(id,dataset) {
         )
       )
     })
+
+    outputOptions(output, "africaCountrySelect", suspendWhenHidden=F)
 
     output$centerSelect <- renderUI({
       div(style=styleTop,

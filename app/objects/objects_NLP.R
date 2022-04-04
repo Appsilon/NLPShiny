@@ -34,6 +34,7 @@ colombia_neigh      <- setDF(fread("app/datasets/withNeigh_coords.csv", encoding
 colombia_locations  <- setDF(fread("app/datasets/colombia_locations.csv", encoding = 'UTF-8') )
 
 # names country vector
+#' @export
 afr_countries       <- readRDS("app/rds/afr_countries.rds")
 
 # country_name  location_name   lat      lng
