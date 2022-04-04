@@ -1,0 +1,81 @@
+"city","location","country_name","state","service_point_name","lat","lng"
+"Arauca","Arauca","Colombia","Arauca","Phone Calls",7.0905241,-70.7754016
+"Arauca","Arauca","Colombia","Arauca","On-site",7.0905241,-70.7754016
+"Arauca","Arauca","Colombia","Arauca","Punto de Atención",7.0905241,-70.7754016
+"Arauca","Arauca","Colombia","Arauca","Arauca",7.0905241,-70.7754016
+"Barranquilla","Barranquilla","Colombia","Atlántico","Barranquilla",11.0041072,-74.8069813
+"Bogotá D.C.","Arquidiocesis","Colombia","Cundinamarca","On-site",4.6404912,-74.0889799
+"Bogotá D.C.","Bogotá D.C.","Colombia","Cundinamarca","Bogotá D.C.",4.7109886,-74.072092
+"Bogotá D.C.","Bogotá D.C.","Colombia","Cundinamarca","On-site",4.7109886,-74.072092
+"Bogotá D.C.","Bosa","Colombia","Cundinamarca","Sala de Espera",4.6086644,-74.1813364
+"Bogotá D.C.","Bosa","Colombia","Cundinamarca","Punto de Atención",4.6086644,-74.1813364
+"Bogotá D.C.","Bosa","Colombia","Cundinamarca","Farmacia",4.6086644,-74.1813364
+"Bogotá D.C.","Bosa","Colombia","Cundinamarca","Salud Mental",4.6086644,-74.1813364
+"Bogotá D.C.","Bosa","Colombia","Cundinamarca","Laboratorio",4.6086644,-74.1813364
+"Bogotá D.C.","Camelias","Colombia","Cundinamarca","Punto de Atención",4.6143875,-74.1184904
+"Bogotá D.C.","Camelias","Colombia","Cundinamarca","Laboratorio",4.6143875,-74.1184904
+"Bogotá D.C.","Camelias","Colombia","Cundinamarca","Farmacia",4.6143875,-74.1184904
+"Bogotá D.C.","Camelias","Colombia","Cundinamarca","Sala de Espera",4.6143875,-74.1184904
+"Bogotá D.C.","Centro Abrazar","Colombia","Cundinamarca","On-site",4.62175025,-74.07157895
+"Bogotá D.C.","Centro Integral De atención al Migrante","Colombia","Cundinamarca","On-site",4.6246556,-74.0776408
+"Bogotá D.C.","Ciudad Bolivar","Colombia","Cundinamarca","Punto de Atención",4.579524,-74.1574289
+"Bogotá D.C.","CP Bogota Phone Calls","Colombia","Cundinamarca","Phone Calls",4.7109886,-74.072092
+"Bogotá D.C.","CP Kennedy","Colombia","Cundinamarca","On-site",4.62193045,-74.15182065
+"Bogotá D.C.","IOM Health Service Day: Hospital Centro Oriente CAMI Samper Mendoza","Colombia","Cundinamarca","On-site",4.6169033,-74.081163
+"Bogotá D.C.","Lourdes de Santa Fe","Colombia","Cundinamarca","Punto de Atención",4.5884334,-74.0729716
+"Bogotá D.C.","Portal de Suba","Colombia","Cundinamarca","On-site",4.7475166,-74.0947723
+"Bogotá D.C.","Suba La Gaitana","Colombia","Cundinamarca","On-site",4.7404586,-74.1071117
+"Bogotá D.C.","Suba Rincón","Colombia","Cundinamarca","On-site",4.7249708,-74.0902543
+"Bucaramanga","Bucaramanga","Colombia","Santander","Farmacia",7.119349,-73.1227416
+"Bucaramanga","Bucaramanga","Colombia","Santander","Cita Médica",7.119349,-73.1227416
+"Bucaramanga","Bucaramanga","Colombia","Santander","Laboratorio",7.119349,-73.1227416
+"Bucaramanga","Bucaramanga","Colombia","Santander","Phone Calls",7.119349,-73.1227416
+"Bucaramanga","Bucaramanga","Colombia","Santander","Bucaramanga",7.119349,-73.1227416
+"Bucaramanga","IPS Sotomayor","Colombia","Santander","Cita Médica",7.1131221,-73.1116887
+"Bucaramanga","La Pedregosa","Colombia","Santander","On-site",7.1005421,-73.1091429
+"Bucaramanga","Piedecuesta","Colombia","Santander","On-site",6.991539,-73.053998
+"Bucaramanga","Piedecuesta","Colombia","Santander","Phone Calls",6.991539,-73.053998
+"Bucaramanga","Public Parks","Colombia","Santander","On-site",7.119349,-73.1227416
+"Cali","Cali","Colombia","Valle del Cauca","Cali",3.44777565,-76.53221775
+"Cartagena","Cartagena","Colombia","Bolivar","Punto de Atención",10.3932277,-75.4832311
+"Cartagena","Localidad 2","Colombia","Bolivar","On-site",10.4059046,-75.4917383
+"Cartagena","Pie de la Popa","Colombia","Bolivar","On-site",10.41955375,-75.53185515
+"Cúcuta","Cúcuta","Colombia","Norte de Santander","Cúcuta",7.8890971,-72.4966896
+"Cúcuta","Cúcuta","Colombia","Norte de Santander","Punto de Atención",7.8890971,-72.4966896
+"Cúcuta","Cúcuta","Colombia","Norte de Santander","On-site",7.8890971,-72.4966896
+"Cúcuta","Villa del Rosario","Colombia","Norte de Santander","On-site",7.8437879,-72.4696897
+"Fonseca","Fonseca","Colombia","La Guajira","Fonseca",10.886123,-72.851515
+"Los Patios","Los Patios","Colombia","Norte de Santander","Los Patios",7.833199,-72.504392
+"Maicao","Maicao","Colombia","La Guajira","Punto de Atención",11.3800543,-72.2422465
+"Maicao","Maicao","Colombia","La Guajira","Maicao",11.3800543,-72.2422465
+"Malambo","Malambo","Colombia","Atlántico","Malambo",10.8575824,-74.7746834
+"Manatí","Manatí","Colombia","Atlántico","Manatí",10.449239,-74.959371
+"Medellín","Medellín","Colombia","Antioquia","Cita Médica",6.2476376,-75.5658153
+"Medellín","Medellín","Colombia","Antioquia","Farmacia",6.2476376,-75.5658153
+"Medellín","Medellín","Colombia","Antioquia","Laboratorio",6.2476376,-75.5658153
+"Medellín","Medellín","Colombia","Antioquia","Phone Calls",6.2476376,-75.5658153
+"Nariño","Nariño","Colombia","Nariño","Nariño",1.2897467,-77.3580033
+"Otros","Otros","Colombia","Atlántico","Otros",10.6966159,-74.8741045
+"Puerto Santander","Puerto Santander","Colombia","Norte de Santander","Puerto Santander",8.361323,-72.408389
+"Riohacha","Riohacha","Colombia","La Guajira","Phone Calls",11.5384151,-72.9167838
+"Riohacha","Riohacha","Colombia","La Guajira","Brigadas de Salud",11.5384151,-72.9167838
+"Riohacha","Riohacha","Colombia","La Guajira","Punto de Atención",11.5384151,-72.9167838
+"Riohacha","Riohacha","Colombia","La Guajira","On-site",11.5384151,-72.9167838
+"Riohacha","Riohacha","Colombia","La Guajira","Riohacha",11.5384151,-72.9167838
+"Santa Marta","Santa Marta","Colombia","Magdalena","Santa Marta",11.2403547,-74.2110227
+"Santiago","Santiago","Colombia","Norte de Santander","Santiago",7.864145,-72.717692
+"Soacha","Fundación Colombia Nuevos Horizontes Soacha","Colombia","Cundinamarca","On-site",4.5772002,-74.2092261
+"Soacha","IOM Health Service Day: Sisben De La Secretaria De Salud","Colombia","Cundinamarca","On-site",4.581578,-74.214907
+"Soacha","Parque Central Soacha","Colombia","Cundinamarca","On-site",4.5821599,-74.2196189
+"Soacha","Soacha","Colombia","Cundinamarca","Phone Calls",4.5827227,-74.2117465
+"Soacha","Soacha","Colombia","Cundinamarca","Sala de Espera",4.5827227,-74.2117465
+"Soacha","Soacha","Colombia","Cundinamarca","Talleres CIAD",4.5827227,-74.2117465
+"Soacha","Soacha","Colombia","Cundinamarca","Punto de Atención",4.5827227,-74.2117465
+"Soacha","Soacha","Colombia","Cundinamarca","Laboratorio",4.5827227,-74.2117465
+"Soacha","Soacha","Colombia","Cundinamarca","Salud Mental",4.5827227,-74.2117465
+"Soacha","Soacha","Colombia","Cundinamarca","Farmacia",4.5827227,-74.2117465
+"Soacha","Soacha","Colombia","Cundinamarca","Soacha",4.5827227,-74.2117465
+"Soacha","Soacha Barrios","Colombia","Cundinamarca","On-site",4.5827227,-74.2117465
+"Soledad","Soledad","Colombia","Atlántico","Soledad",10.9215472,-74.7688173
+"Villa del Rosario","Villa del Rosario","Colombia","Norte de Santander","Villa del Rosario",7.8437879,-72.4696897
+"Villa del Rosario","Villa del Rosario","Colombia","Norte de Santander","Phone Calls",7.8437879,-72.4696897
