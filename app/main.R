@@ -131,8 +131,7 @@ server <- function(id) {
     howto_map$server("minimap")
 
     observe({
-      onclick("button",
-        {
+      onclick("button", {
           toggle("sidebar_id", asis = T)
         },
         asis = TRUE

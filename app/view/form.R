@@ -40,8 +40,8 @@ box::use(
 ui <- function(id) {
   ns <- NS(id)
   tagList(
-    uiOutput(ns("input1Box")),
-    uiOutput(ns("input2Box"))
+    uiOutput(ns("input_box1")),
+    uiOutput(ns("input_box2"))
   )
 }
 
@@ -50,9 +50,9 @@ server <- function(id, vars_unify) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    rv <- reactiveValues(termButtonVal = 0, deleteButton = 0)
+    rv <- reactiveValues(term_button_val = 0, delete_button = 0)
 
-    output$input1Box <- renderUI({
+    output$input_box1 <- renderUI({
       div(
         style = "width:500px;",
         segment(
@@ -88,7 +88,7 @@ server <- function(id, vars_unify) {
       )
     })
 
-    output$input2Box <- renderUI({
+    output$input_box2 <- renderUI({
       div(
         style = "width:500px;",
         segment(
@@ -105,7 +105,7 @@ server <- function(id, vars_unify) {
               ),
               div(
                 style = "padding:10px 0px 10px 5px",
-                verbatimTextOutput(ns("uploadText"))
+                verbatimTextOutput(ns("upload_text"))
               )
             ),
             tagList(
@@ -119,7 +119,7 @@ server <- function(id, vars_unify) {
               ),
               div(
                 style = "padding:10px 0px 20px 15px",
-                verbatimTextOutput(ns("deleteText"))
+                verbatimTextOutput(ns("delete_text"))
               )
             )
           )
@@ -128,17 +128,16 @@ server <- function(id, vars_unify) {
     })
 
     observeEvent(vars_unify$dataset(), ignoreInit = T, {
-      rv$termButtonVal <- 1
+      rv$term_button_val <- 1
 
-      rv$deleteButton <- 1
+      rv$delete_button <- 1
     })
 
     observeEvent(input$upload_mongo, ignoreInit = T, {
-      rv$termButtonVal <- 0
+      rv$term_button_val <- 0
 
-      rv$deleteButton <- 1
+      rv$delete_button <- 1
 
-      # satisfied_num<- as.integer(input$satisfied)
       satisfied_num <- as.integer(input$satisfied)
 
       created_at_tz <- paste0(
@@ -182,9 +181,9 @@ server <- function(id, vars_unify) {
       )
 
       if (class(saved) != "character") {
-        rv$messageUpload <- "Successfully uploaded"
+        rv$message_upload <- "Successfully uploaded"
       } else {
-        rv$messageUpload <- "not uploaded, check internet"
+        rv$message_upload <- "not uploaded, check internet"
       }
     })
 
@@ -195,32 +194,32 @@ server <- function(id, vars_unify) {
     ############################################################
 
     observeEvent(input$removelast, {
-      rv$deleteButton <- 0
-      rv$termButtonVal <- 1
+      rv$delete_button <- 0
+      rv$term_button_val <- 1
 
-      collectionName <- "colombia_big"
-      databaseName <- "kujakuja"
+      collection_name <- "colombia_big"
+      database_name <- "kujakuja"
 
-      db_col <- connectdb(collectionName, databaseName)
+      db_col <- connectdb(collection_name, database_name)
 
       iter <- db_col$iterate(sort = paste0('{\"$natural\":', -1, "}"))
       json <- iter$json(1)
       # json
       db_col$remove(json)
-      rv$removeText <- "deleted 1 item"
+      rv$remove_text <- "deleted 1 item"
     })
 
-    output$uploadText <- renderText({
-      if (rv[["termButtonVal"]] == 0) {
-        rv$messageUpload
+    output$upload_text <- renderText({
+      if (rv[["term_button_val"]] == 0) {
+        rv$message_upload
       } else {
         return("")
       }
     })
 
-    output$deleteText <- renderText({
-      if (rv[["deleteButton"]] == 0) {
-        rv$removeText
+    output$delete_text <- renderText({
+      if (rv[["delete_button"]] == 0) {
+        rv$remove_text
       } else {
         return("")
       }

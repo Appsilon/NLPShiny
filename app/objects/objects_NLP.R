@@ -1,7 +1,6 @@
 box::use(
-  data.table[setDF,fread]
+  data.table[setDF, fread]
 )
-# localMode <- TRUE  # uses csv
 
 #####################################
 #
@@ -161,4 +160,3 @@ i_type_na <- c("type1", "type2")
 
 #' @export
 long_type_names <- c("cash" = "Cash Transfer", "health" = "Healthcare")
-

@@ -65,6 +65,3 @@ sidebar <- tagList(
     styles = sidebar_style
   )
 )
-
-
-

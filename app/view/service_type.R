@@ -92,8 +92,7 @@ server <- function(id, service,
 
     observeEvent(
       vars_filter$submit(),
-      ignoreInit = T,
-      {
+      ignoreInit = T, {
         rv$alist$ds_copy <- vars_unify$dataset_whole()
 
         update_dropdown_input(

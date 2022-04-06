@@ -1,13 +1,13 @@
 box::use(
   shiny.react[JS],
-  leaflet[setView,leaflet,
-          addTiles,providerTileOptions,leafletOptions,
+  leaflet[setView, leaflet,
+          addTiles, providerTileOptions, leafletOptions,
           markerClusterOptions,
           addLegend,
           addCircleMarkers],
   shiny[tags],
-  shiny.semantic[field,text_input],
-  DT[datatable,formatStyle,formatRound]
+  shiny.semantic[field, text_input],
+  DT[datatable, formatStyle, formatRound]
 )
 
 box::use(

@@ -297,8 +297,7 @@ server <- function(id) {
     })
 
     observeEvent(input$submit,
-      ignoreInit = T,
-      {
+      ignoreInit = T, {
         disable("cash_select_UI_id1", asis = T)
         disable("health_select_UI_id1", asis = T)
         disable("cash_select_UI_id2", asis = T)

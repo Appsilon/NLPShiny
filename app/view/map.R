@@ -79,10 +79,9 @@ server <- function(id, dataset_init, idx,
     #   MAP updater / observer of buttons
     #
     ####################################
-    if (T) {
+
       observeEvent(vars_unify$dataset(),
-        ignoreInit = T,
-        {
+        ignoreInit = T, {
           output$map <- renderLeaflet({
             validate(
               need(
@@ -119,6 +118,6 @@ server <- function(id, dataset_init, idx,
           }) # map output
         }
       ) # observeEvent
-    }
+
   })
 }

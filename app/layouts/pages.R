@@ -1,7 +1,7 @@
 box::use(
   shiny[bootstrapPage, NS, renderText, tags,
         textOutput, tagList, div, wellPanel,
-        br,h2,h4],
+        br, h2, h4],
   shiny.fluent[IconButton.shinyInput, Text, CommandBar, Stack],
   shiny.semantic[semanticPage, tabset, segment, splitLayout],
   shiny.router[...]
@@ -18,7 +18,7 @@ box::use(
 )
 
 #' @export
-input_form_page <- function(id){
+input_form_page <- function(id) {
   ns<-NS(id)
 tagList(
   div(
@@ -32,12 +32,12 @@ tagList(
 }
 
 #' @export
-intro_page <- function(){
+intro_page <- function() {
   tagList(
   div(style="margin-left:4px;",
       br(),
       h2("Introduction")
-      ,br(),
+      , br(),
       div(style="max-width:33vw;",
         segment(style="padding:20px;",
                 div(
@@ -48,7 +48,8 @@ intro_page <- function(){
                       "Business problem",
                       block = F
                     ),
-                    lapply(card7list, function(x) {Text(x)
+                    lapply(card7list, function(x) {
+                      Text(x)
                     })
                   )
                 )
@@ -62,7 +63,8 @@ intro_page <- function(){
                       "Which model is used and how?",
                       block = F
                     ),
-                    lapply(card8list, function(x) {Text(x)
+                    lapply(card8list, function(x) {
+                      Text(x)
                     })
                   )
                 )
@@ -72,12 +74,12 @@ intro_page <- function(){
 )
 }
 
-howto_page <- function(map_ns){
+howto_page <- function(map_ns) {
   tagList(
   div(style="margin-left:4px;",
       br(),
       h2("Pages functionality")
-      ,br()
+      , br()
   ),
   splitLayout(style = "background:#FFFFFF;",
     tagList(
@@ -129,7 +131,7 @@ howto_page <- function(map_ns){
 }
 
 #' @export
-main_page <- function(id){
+main_page <- function(id) {
   ns<-NS(id)
   tagList(
   div(class="grid-inside-up",
@@ -145,8 +147,8 @@ main_page <- function(id){
   , div(class="grid-inside-down",
         div(class="downleft"
             , tag$ui(ns("ns_tag"))
-            , service_type$ui(ns("ns_cash"),"cash")
-            , service_type$ui(ns("ns_health"),"health")
+            , service_type$ui(ns("ns_cash"), "cash")
+            , service_type$ui(ns("ns_health"), "health")
         )
         , div(class="downright",
               semanticPage(

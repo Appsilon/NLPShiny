@@ -29,7 +29,6 @@ basic_colombia <- function() {
   db_col <- connectdb(collection_name, database_name)
 
   center_init <- "Cundinamarca"
-  # find_string <- paste0('{"state":"', center_init, '"}')
 
   find_string <- paste(
     "{\"service_type\":{\"$in\" : [\"Healthcare\",\"Cash Transfer\"] },",

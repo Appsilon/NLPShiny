@@ -36,7 +36,7 @@ card1 <- div(
 )
 
 #' @export
-card2 <- function(id){
+card2 <- function(id) {
   ns <-NS(id)
   div(
   Stack(

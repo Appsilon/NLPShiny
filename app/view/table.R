@@ -109,8 +109,7 @@ server <- function(id, dataset_init,
     })
 
     observeEvent(c(vars_unify$dataset()),
-      ignoreInit = T,
-      {
+      ignoreInit = T, {
         dataset <- vars_unify$dataset()
 
         extant_cols <- colnames(dataset)
@@ -168,8 +167,7 @@ server <- function(id, dataset_init,
           )
         }
 
-        output$mytable <- DT::renderDataTable(
-          {
+        output$mytable <- DT::renderDataTable({
             make_table(
               dataset, filtered_cols,
               loc_u, dontwrap_cols_filt,
