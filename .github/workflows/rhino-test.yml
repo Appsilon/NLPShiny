@@ -13,6 +13,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Install libgdal
+        run: |
+          sudo apt-get install libgdal-dev
+
       - name: Install curl-dependency
         run: |
           sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
