@@ -1,73 +1,55 @@
 # R packages
 box::use(
-  shiny[bootstrapPage, moduleServer, NS, renderText, tags, textOutput, tagList, div,
-        fluidPage,
-        observeEvent],
+  shiny[
+    moduleServer, NS,
+    tags, div,
+    fluidPage,
+    observe
+  ],
+  shinyjs[useShinyjs, onclick, toggle],
+  shiny.router[make_router],
 )
 
 box::use(
-  shinyjs[useShinyjs]
-)
-
-box::use(
-  shiny.router[...]
-)
-
-box::use(
-  mongolite[...]
-)
-
-
-# Modules
-
-# box::use(
-#   r/objects_ui[...]
-# )
-
-box::use(
-  app / layouts / sidebar[...],
-  app / layouts / headers[...],
-  app / layouts / footers[...],
   app / layouts / pages[...],
+  app / layouts / sidebar[...],
+  app / layouts / headers_footer[...],
   app / mongo / mongo_fun[...],
-  app / objects / global[...],
-  app / objects / functions_NLP[...],
+  app / logic / functions_NLP[...],
   app / objects / objects_NLP[...],
 )
 
 box::use(
+  app / view / filter,
   app / view / service_type,
   app / view / map,
-  app / view / submit,
   app / view / table,
   app / view / tag,
   app / view / unify,
+  app / view / howto_map,
+  app / view / form,
 )
 
-#' @export
+dataset_init <- basic_colombia()
+
 router <- purrr::lift(make_router)(pages_menu)
 
-# layout <-
-hl51<<-header_left
 #' @export
 ui <- function(id) {
   fluidPage(
-  useShinyjs(),
-  # tags$head(
-  #   tags$link(href = "style.css", rel = "stylesheet", type = "text/css"),
-  # ),
-  shiny::tags$body(
-    dir = "ltr",
-    div(
-      class = "grid-container",
-      div(class = "header_left", header_left),
-      div(class = "header_right", header_right),
-      div(class = "sidenav", sidebar, id = "sidebar_id"),
-      div(class = "main", router$ui),
-      div(class = "footer", footer)
+    useShinyjs(),
+    shiny::tags$body(
+      dir = "ltr",
+      div(
+        class = "grid-container",
+        div(class = "header_left", header_left),
+        div(class = "header_right", header_right),
+        div(class = "sidenav", sidebar, id = "sidebar_id"),
+        div(class = "main", router$ui),
+        div(class = "footer", footer)
+      )
     )
   )
-)
 }
 
 #
@@ -78,51 +60,83 @@ server <- function(id) {
   moduleServer(id, function(input, output, session) {
     router$server(input, output, session)
 
-  #
-  #   inputs
-  #
+    #
+    #   inputs
+    #
+    vars_filter <- filter$server("ns_filter")
 
-  vars_submit <- submit$server("mod_submit", dataset_init)
+    #
+    # tag
+    #
+    vars_tag <- tag$server(
+      "ns_tag",
+      vars_unify
+    )
 
-  #
-  # tag
-  #
+    #
+    #   services
+    #
+    vars_cash <- service_type$server(
+      "ns_cash",
+      "cash",
+      vars_unify,
+      vars_filter
+    )
 
-  vars_tag    <- tag$server("mod_tag", vars_unifier)
+    vars_health <- service_type$server(
+      "ns_health",
+      "health",
+      vars_unify,
+      vars_filter
+    )
 
-  #
-  #   services
-  #
+    #
+    #  gather vars and unify
+    #
 
-  vars_cash   <- service_type$server("cash", vars_unifier, vars_submit)
+    vars_unify <- unify$server(
+      "ns_unify",
+      dataset_init,
+      vars_filter,
+      vars_tag,
+      vars_cash,
+      vars_health
+    )
 
-  vars_health <- service_type$server("health", vars_unifier, vars_submit)
+    #
+    #   map
+    #
+    map$server(
+      "ns_map", dataset_init, idx,
+      vars_unify
+    )
 
-  #
-  #  gather and unify
-  #
+    #
+    # table
+    #
 
-  vars_unifier <- unify$server(
-    "ns_unifier", dataset_init,
-    vars_submit, vars_tag,
-    vars_cash,
-    vars_health
-  )
+    table$server(
+      "ns_table", dataset_init,
+      vars_unify
+    )
 
-  #
-  #   map
-  #
+    #
+    # form page
+    #
+    form$server("ns_form", vars_unify)
 
-  map$server("nsMap", dataset_init, idx, vars_unifier)
+    #
+    # howto page
+    #
+    howto_map$server("minimap")
 
-  #
-  # table
-  #
-
-  table$server("mod_table", dataset_init, vars_unifier)
-
-  observeEvent(input$button, {
-    shinyjs::toggle("sidebar_id")
+    observe({
+      onclick("button",
+        {
+          toggle("sidebar_id", asis = T)
+        },
+        asis = TRUE
+      )
+    })
   })
-
-})}
+}

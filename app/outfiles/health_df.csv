@@ -1,3 +1,824 @@
-"","dataset_init[which(dataset_init$service_type == ""Healthcare""), ""idea""]"
-"1","1Todos los servicios muy completos
+"","dataset[which(dataset$service_type == ""Healthcare""), ""feedback""]"
+"1","Deseo que el personal médico fuera capacitado en escuchar y atender a lo que
+sentimos porque me siento mal y al salir no tuve una respuesta
+"
+"2","Pienso que las personas que nos reciben al llegar deben ser más amables con los
+pacientes, no me sentí a gusto con el trato recibido.
+"
+"3","Sugiero colocar una camilla adicional para los pacientes que estamos en
+recuperación, esperé sentada a que me estabilizaran la tensión.
+"
+"4","Estar más atentos con respecto a las llamadas para entrega de resultados, pues
+me realizaron exámenes el 14 de julio y no me habían llamado.
+"
+"5","Deseo que el médico tome nota y tenga muy presente todas mis anotaciones médicas
+para que no las pase por alto en el diagnóstico
+"
+"6","Pienso que deberían tener un biombo para separar la farmacia del laboratorio
+para tener más privacidad.
+"
+"7","Mi idea es que la atención sea más rápida y den cumplimiento estricto a la hora
+de la cita la tenía a la 11.  pasó 1 hora y no me atendieron
+"
+"8","Si llegamos tarde escuchar el por qué e intentar atendernos, tengo 3
+enfermedades inmunológicas y no tengo recursos
+"
+"9","Capacitar al personal médico en atención al usuario y así realizar un chequeo
+exhaustivo tengo una dermatitis y no miro esta afección
+"
+"10","Deseo que los médicos se capaciten en atención al usuario y empatía para que en
+la consulta nos sintamos bien e importantes para regresar
+"
+"11","Sugiero que el servicio de laboratorio sea más agil, considero que hay
+suficiente personal, sólo falta que sean más rápidos en sus labores.
+"
+"12","Tardé 3 horas para poder ser atendida y estoy en ayuno, considero que es urgente
+incluir personal en laboratorio para evitar estos retrasos.
+"
+"13","En un formato ir llenando los datos básicos para que se agilice el ingreso y el
+doctor logré atendernos más pronto
+"
+"14","Estoy desde las 7 am para unos exámenes, no los hicieron y me hacen venir de
+nuevo, brindar auxilio de transporte y agilizar el tiempo
+"
+"15","Para mejorar los tiempos de espera sería bueno que ya se tuvieran impresos los
+exámenes al llegar a la lectura y así agilizar el proceso
+"
+"16","Respetar la hora de la cita y el orden de llegada de los pacientes, ya que
+atendieron personas que llegaron después de mi.
+"
+"17","Facilitar la entrega de resultados al correo o por un link de CRC sería más
+efectivo, y podría tener un tratamiento.
+"
+"18","El servicio de medicina general es bueno,me gustaría que implementarán más
+servicios como, ortopedia, odontología que son importantes.
+"
+"19","Es muy díficil acceder a una cita en CRC deberían tener un punto de atención
+físico para sacar la cita en un horario flexible.
+"
+"20","Llevo tiempo tratando de lograr una cita por teléfono es complicado, deberían
+tener una oficina en CRC que nos dieran la cita personalmente.
+"
+"21","Me gustaría que hubieran más líneas telefónicas para agendamiento de citas,
+podría contar con una atención más rápida.
+"
+"22","Los servicios de CRC son buenos,solo pondría más líneas telefónicas esto
+disminuiría el tiempo de realizar la llamada y obtendría una cita.
+"
+"23","Quiero que la cruz roja nos apoye con asesoría de emprendimiento para poder
+crear una microempresa familiar y generar nuestros propio dinero
+"
+"24","Deseo que capacitenten al personal de CRC, para que conozcan bien los servicios
+que ofrecen y de esta forma nos informen y nos orienten bien
+"
+"25","Me gustaría que en las caracterizaciones nos tengan en cuenta a los
+profesionales para orientarnos y poder direccionar una hoja de vida.
+"
+"26","Que se implementen más servicios de especialistas como odontología, ginecología,
+optometría para que el servicio sea más completo.
+"
+"27","Sería bueno que para las próximas brigadas puedan tener los servicios como
+odontología, ginecología ya que son muy necesarios en este lugar.
+"
+"28","Creo que las brigadas de salud deberían ser constantes ya que muchos de pensemos
+de medicina para mejorar nuestro estado de salud.
+"
+"29","Que organizarán otra brigada de salud, ya que nos sirve para tener atención
+médica y recibir información.
+"
+"30","La atención en salud en la cruz roja es muy importante porque con el podemos
+tener medicamentos y laboratorios para terminar tramiento.
+"
+"31","Si pudiera seguir contando con las brigadas de salud,mis hijos tendrían
+controles médicos y medicamentos.
+"
+"32","Que podamos contar con un servicio de farmacia para que todos los medicamentos
+puedan tener un excelente manejo.
+"
+"33","Que tengan en cuenta la importancia de las brigadas de salud para los
+migrantes,pude tener atención médica gratuita y de calidad.
+"
+"34","Que el servicio de farmacia sea muy completo por que con ello puedo tener la
+facilidad de entender mejor la toma del medicamento.
+"
+"35","Que se pueda tener una línea de atención al migrante las 24 horas del día para
+que todos podamos estar informados de los servicios.
+"
+"36","Que las caracterizaciones sean mucho más seguidas a si todos los migrantes
+podemos acceder a los diferentes servicios que nos brindan.
+"
+"37","Quiero tener el servicio de salud en la cruz roja para que los migrantes podamos
+acceder a odontología ya que no tenemos servicio de salud.
+"
+"38","Me gustaría poder contar de nuevo con las brigadas de salud para poder continuar
+con el tratamiento de mi hijo.
+"
+"39","El servicio de salud es muy bueno sería importante que la cruz roja pueda
+implementar servicios como odontología que son muy esenciales.
+"
+"40","Es importante para nosotros que el servicio de salud sea implementado rápido ya
+que es el único lugar donde atienden sin ser discriminados.
+"
+"41","Que las brigadas sean reabiertas y poder contar con servicios de especialistas
+como ginecología y llevar mis controlessin obstáculos.
+"
+"42","Que nos permitieran seguir recibiendo las ayudas económicas y las brigadas de
+salud.muchos nos quedamos sin esa ayuda.
+"
+"43","Creo que las ayudas que prestan en la cruz roja soy muy buenas para que podamos
+acceder a un trabajo o alimentación sin tantos trámites.
+"
+"44","Queremos contar con el servicio de salud en la cruz roja esto hace que nuestros
+niños y gestantes sean atendidos sin discriminación.
+"
+"45","Contar con un servicio de albergue así no invadidos espacios públicos ni calles
+y nuestros niños están expuestos a enfermedades virales.
+"
+"46","Necesitamos que la cruz roja puedan contar con el servicio de  pediatra para que
+mi bebe pueda tener el servicio y terminar el tratamiento.
+"
+"47","Yo pienso que no deberían quitar las brigadas de salud,ya que todos nos vemos
+beneficiados al ser el único sitio qué nos atiende .
+"
+"48","Que en la cruz roja hubiera el servicio de albergues para que mis padres y hijos
+pudieran dormir tranquilo y no pasar frío.
+"
+"49","Qué las grandes organizaciones apoyaran a la cruz roja para que podamos seguir
+contando con brigadas ayudas económicas.
+"
+"50","Perdir ayuda a las diferentes organizaciones,que apoyen a cruz roja para que nos
+puedan seguir dando las ayudas económicas y salud.
+"
+"51","Una línea de atención al migrante para que pueda ser atendido y orientado en los
+servicios que prestan en  la cruz roja las 24 horas.
+"
+"52","Apoyar económicamente a la cruz roja para que nos puedan seguir dando las ayudas
+económicas y brigadas de salud.
+"
+"53","Quiero que la cruz roja siga con las brigadas de salud,ya que gracias a este
+servicio mi papá tiene la tensión arterial controla.
+"
+"54","Me gustaría poder contar con el servicio de vacunación así mi niño tendrá una
+salud óptima sin virus en su cuerpo
+"
+"55","Que sigan con las brigadas médicas para poder tener medicamentos ya que no puedo
+comprarlos por falta de trabajo.
+"
+"56","Creo que la cruz roja puede tener una sede especial para atención médica y así
+poder tener más servicios para la atención al migrante
+"
+"57","Que no quieten las brigadas de salud,es el único sitio qué nos atienden sin
+tener que pagar y mis hijos y familiares se van haber afectados
+"
+"58","Sí pudiaremos seguir contando con las brigadas de salud,mis hijos él día de hoy
+tendrían un servicio médico gratuito.
+"
+"59","Que no trasladen las brigadas de salud,Soacha es muy central para todos y lo
+mejor no tenemos que pagar trasporte.
+"
+"60","Que no trasladen las ayudas económicas ni las brigadas de salud ya que en Soacha
+es un sitio muy central para todos y la atención es buena.
+"
+"61","Me gustaría poder contar con el servicio de asesoría jurídica para tener
+claro,como proceder cuando tenga un conflicto con el arrendatario.
+"
+"62","Creo es importante que las organizaciones internacionales sigan apoyando a cruz
+roja para que ellos nos apoyen con alimentación.
+"
+"63","Me gustaría que en las caracterísaciones puedan entregar kit de aseo para que
+podamos enviar a nuestros niños al colegio aseados.
+"
+"64","Mi hijo necesita controles neurológicos porque al venir de Venezuela se quedó
+sin esto,sería muy bueno que CRC contará con esta especialidad
+"
+"65","Más información de las brigadas, así tendríamos la tranquilidad de saber que si
+van a prestar el servicio médico.
+"
+"66","Creó que si en la cruz roja tuviera albergues muchos migrantes no tendrían a
+dormir en las calles ni pasar necesidades.
+"
+"67","Soy gestante y me gustaría que en la cruz roja las brigadas de salud sean
+continuas para que mi bebe pueda tener acceso sin tantos obstáculo
+"
+"68","Que nos permitan seguir gozando de la brigada de salud,ya que nos prestaron muy
+buen servicio y sin costó alguno.
+"
+"69","Urgente ayudas de trabajo para los venezolanos,ya no podemos trabajar ni en las
+calles así será más díficil sobrevivir.
+"
+"70","No estoy recibiendo ningún servicio y propongo que agilicen  las ayudas con
+respecto a alimentos ya que se me dificulta obtenerlos.
+"
+"71","Creo que las brigadas de salud son importantes soy gestante y la cruz roja es el
+único servicio con el que puedo contar sin ser discriminada
+"
+"72","Me gustaría poder seguir contando con las brigadas de salud,ya que son gratuitas
+y de igualdad.
+"
+"73","Poder tener el servicio de comedores comunitarios para todos los migrantes para
+que podamos acceder a este servicio y no pasar hambre.
+"
+"74","Si las brigadas continuarán, me serviría para que mis familiares pudieran pasar
+a un médico o tener una ayuda económica sin ser rechazados.
+"
+"75","Estoy embarazada y espero poder seguir contando con la atención médica porque en
+los hospitales me dicen que no me pueden ayudar.
+"
+"76","Una infraestructura más grande y centrada para que cuando lleguen los
+migrantes,puedan todos acceder a estos servicios sin barreras.
+"
+"77","Que los servicios de cruz roja no cambiarán ya que antes nos daban ayudas
+económicas y salud y hoy ya no contamos con nada.
+"
+"78","Es importante contar con el servicio de cruz roja por que nos orientan y apoyan
+en las  diferentes necesidades que tenemos en este país.
+"
+"79","Que los talleres de empleabilidad sea vuelvan a implementar para nosotros es
+importante ya que nos orientan en la búsqueda de trabajo.
+"
+"80","Que los espacios fueran más grandes eso serviría para que vinieran más personas
+a la brigadas de salud.
+"
+"81","Que en las fronteras podamos contar con el servicio de duchas y atención
+enfermería para seguir nuestros camino aseados y hidratados.
+"
+"82","Quiero que en la cruz roja los migrantes puedan seguir contando con el servicio
+de medicina para que puedan tener un estado de salud estable
+"
+"83","Creo que es importante que en las próximas brigadas podamos contar con un un
+oncólogo para que mi hijo pueda seguir disfrutando de este país
+"
+"84","No quitar las brigadas dé salud,esto nos permitia tener un sitio donde poder
+llevar a los controles médicos sin tener que pagar.
+"
+"85","Que las brigadas dé salud no las quitarán hoy podría ser atendido mí hijo ya no
+tiene medicamentos.
+"
+"86","Me gustaría poder contar con el servicio de salud otra vez para que mi familia
+pueda tener este servicio sin ser discriminados.
+"
+"87","Que las brigadas de salud sean permanentes para que todos los migrantes podamos
+acceder a salud sin barreras para nuestros niños.
+"
+"88","Que las organizaciones internacionales envíen más médicos especialistas par que
+los venezolanos con enfermedades crónicas sean atendidos.
+"
+"89","Soy madre cabeza de hogar de dos niñas y no tengo donde puedan tener sus
+controles médicos, porque ya no hay brigadas de salud en cruz roja.
+"
+"90","Una línea de atención y orientación en salud mientras llegan de nuevo las
+brigadas para tener poder atender a nuestros niños.
+"
+"91","Me parece que la cruz roja la atención al menor debería ser constante para que
+mantenga distraídos y aprendiendo muestras trabajamos
+"
+"92","Me gustaría que en la cruz roja se implemente el servicio de ecografía y
+ginecología para saber en qué estado de salud se encuentra mi bebe.
+"
+"93","Creo que las cruz roja necesita de otra sede para poder atender a todos los
+venezolanos que están recién llegados y desorientados.
+"
+"94","Tener asesoría y apoyo jurídico para los venezolanos para que no nos vulneren
+nuestros derechos y cuando arrendamos un lugar para vivir
+"
+"95","Tener las brigadas de salud para todos los migrantes en la cruz roja para que
+nuestras familias puedan acceder al servicio sin obstáculos.
+"
+"96","Espacio más grande y con sillas en sala de espera, permitiría qué más población
+migrante recibieran los servicios de salud, ayuda económica
+"
+"97","Que en las brigadas de salud se puedan implementar el servicio de ginecología
+que es muy importante por tanta gestante.
+"
+"98","Poder contar con especialistas cuando llegue las brujas para mis hijos sean
+atendidos por un pediatra.
+"
+"99","Poder seguir contando con los talleres de empleabilidad para que sigamos siendo
+orientados y poder acceder a un empleo formal.
+"
+"100","Poder contar con el servicio de alimentación en cruz roja,para que nuestros
+hijos puedan tener un plato de comida ya no cuento con trabajo.
+"
+"101","Poder contar con una sala de espera más amplia ya que es donde nos brinda
+capacitaciónes y orientación y no contamos con muchas sillas.
+"
+"102","Seguir contando con las brigadas de salud de la Cruz roja me ayudaría a seguir
+con mis controles de paciente crónicos.
+"
+"103","Implementación de comedores en la cruz roja para que podamos llevar a nuestros
+hijos y tenga una alimentación saludable mientras trabajamos.
+"
+"104","Un espacio más grande en sala de espera, así atenderían a más personas y
+recibirían el servicio tan bueno con las ayudas económicas y salud.
+"
+"105","No me gustaría que Cruz roja quitarán las brigadas ya que han sido dé gran ayuda
+para nosotros que no contamos con un servicio médico.
+"
+"106","Mi idea es que la cruz roja pueda tener el servicio de salud continuo para
+migrantes para poder terminar los tratamientos médicos.
+"
+"107","Veo que la atención prestada es muy buena si tenemos,más servicios podemos tener
+acceso ayudas y alimentación.
+"
+"108","Quiero que el servicio de salud continúe para mí  ya que tengo 6 meses de
+gestación y es el único lugar donde me atienden.
+"
+"109","Tengo siete hijos contar con el apoyo de la cruz roja es un alivio, espero que
+me puedan ayudar con alimentación ya que no tengo trabajo.
+"
+"110","Que las organizaciones internacionales sigan brindando el apoyo asi los
+migrantes nos vemos beneficios con estas ayudas.
+"
+"111","Permitir que las brigadas de salud de cruz roja continuarán ya que todos nos
+vemos beneficiados con este servicio tan bueno.
+"
+"112","Contar con un televisor y un reloj en la sala de espera haría más corto mí
+tiempo en la espera de un servicio.
+"
+"113","Un sala de espera más amplia ya que en el recibimos capacitación y el llamado
+para la atención médica.
+"
+"114","Que me tuvieran en cuenta para las ayudas ya que soy madre de 4 niños y ese
+dinero me serviría para el arriendo o alimentación.
+"
+"115","Contar con un espacio más grande en la cruz roja nos facilita la atención de más
+personas y más comodidad.
+"
+"116","Tener el servicio de fotocopias en cruz roja así tocara pagar no tendría que
+perder tiempo buscando donde sacar la copia de los documentos.
+"
+"117","Que en las brigadas incluyan vacunación para que nuestros hijos tengan un
+servicio completo y de calidad para que estén al día en salud
+"
+"118","Soy gestante y espero seguir recibiéndolo el servicio de medicina para que mi
+bebe llegue sano y salvo y los de otras gestantes también.
+"
+"119","Poder contar siempre con atención en salud en cruz roja que no sean brigadas
+mejor que tengan continuidad.
+"
+"120","Seguir contando con las brigadas médicas nos permitiría seguir contando con
+medicamentos y atención a los niños.
+"
+"121","Mi idea es que la cruz roja pueda contar con otra sede,para que puedan mantener
+las brigadas de salud y atender más migrantes.
+"
+"122","Me gustaría seguir contando con las ayudas económicas ya que es el único lugar
+qué nos ayuda  he podido hacer mercado con ese dinero.
+"
+"123","Me gustaría que la cruz roja nos apoyara con alimentación,ya que no tenemos
+trabajo y lo poco que ganamos es para pagar arriendo y servicios
+"
+"124","Que esas grandes organizaciones ayuden a cruz roja para que puedan seguir las
+brigadas de salud ya que es el único sitio qué nos ayudan.
+"
+"125","Me gustaría que las brigadas médicas fueran todo el año ya que tenemos
+tratamientos y medicamentos que falta por entregar.
+"
+"126","Poder contar con un albergue en cruz roja así podemos estar bajo techo con
+nuestra familia, mientras puedo acceder a un trabajo.
+"
+"127","Que el servicio de atención médica continua ya que gracias a él pudimos detectar
+enfermedades y virus recogidos en el camino.
+"
+"128","Que la cruz roja pueda contar con otra sede para solo salud y en este espacio
+poder contar con los talleres de emprendimiento.
+"
+"129","Más publicidad para que los migrantes podamos acceder de los servicios y ayudas
+que nos prestan y que se pierden por mala información.
+"
+"130","Ayudas con alimentación para migrantes esto es una ayuda importante por que
+muchos no tenemos trabajo y lo poco que ganamos es para arriendo
+"
+"131","Un espacio más grande en cruz roja para poder atender a toda la población
+migrante que llegas buscar orientación con su familia.
+"
+"132","Que las ayudas económicas las puedan seguir brindando en cruz roja,a sido de
+gran ayuda por qué la destinó a la alimentación dé mí familia.
+"
+"133","Sería bueno que la sala de espera fuera más amplia así no tendríamos qué esperar
+en la calle.
+"
+"134","Más publicidad en redes sociales de la cruz roja para que los migrantes podamos
+acceder a los servicios y ayudas que nos ofrecen.
+"
+"135","Me gustaría contar con un servicio de comedor comunitario para que los migrantes
+podamos comer algo con nuestra familia.
+"
+"136","Que las cruz roja tenga publicidad en los diferentes medios de comunicación para
+que tengamos conocimiento de los servicios que prestan.
+"
+"137","Cruz roja debería ser más grande y con más sillas para que no quedemos apretados
+y ocupando los pasillos.
+"
+"138","Contar con las brigadas de salud en la cruz roja me ha mejorado mi calidad de
+vida si las quitan ya no tendría donde llevar a mi familia.
+"
+"139","Me gustaría poder seguir contando con las brigadas de salud ya que nosotros los
+venezolanos no tenemos dinero para pagar una consulta.
+"
+"140","Contar con médicos y especialistas en la Cruz roja mejorar la calidad de vida
+para el migrante que no quiten la atención médica.
+"
+"141","Si las brigadas dé salud las quitan se quedarían sin controles médico mis hijos
+y sin recibir sus medicamentos.
+"
+"142","Que las brigadas dé salud continuarán nos permite tener una atención médica para
+mí familia y sin costó
+"
+"143","Estoy recibiendo el apoyo de la cruz roja espero que los talleres de
+empleabilidad se dicten otra vez así podré tener una orientación labora
+"
+"144","Quiero que las ayudas internacionales sigan apoyando a la cruz roja para que
+ellos sigan llegando sus servicios a los migrantes.
+"
+"145","Necesitamos que las brigadas médicas estén constantes ya que esté el único lugar
+donde nos atienden y nos brindan ayudas.
+"
+"146","Un espacio más grande en sala de espera porque nos toca muchas veces esperar en
+la calle o de pié.
+"
+"147","Gracias a las brigadas de salud de la cruz roja,pude recibir atención médica
+gratuita si no las quitarán hoy podría tener atención.
+"
+"148","Contar con más especialistas de obstetricia para poder tener mis controles
+prenatales ya que es el único sitio qué me atiden.
+"
+"149","Un televisor en la sala de espera nos serviría para entretenernos mientras
+esperamos el llamado del servicio.
+"
+"150","Un espacio más grande en sala de espera nos permitiría una mejor atención y más
+cómodidad y sin incomodar a los personal de cruz roja.
+"
+"151","Si el servicio de Cruz roja fuera más amplia nos permitiría no estar en los
+pasillos ocupando espacio.
+"
+"152","Que los talleres de empleabilidad vuelvan a tender a migrantes para que nos
+sigan orientando y poder acceder a un trabajo formal.
+"
+"153","Tener un apoyo económico y médico para las personas con alguna discapacidad,para
+poder tener un poco de tranquilidad y esperanza.
+"
+"154","Sería bueno poder seguir contando con las brigadas de salud de la cruz roja,ya
+que por ellos pude tener medicamentos y tener control médico.
+"
+"155","Para mí es importante que la cruz roja tenga más sucursales a nivel nacional por
+que es el único que nos presta servicios sin discriminación
+"
+"156","Sería bueno que nos ayudarán con talleres de capacitación en cocina,
+manualidades me serviría para poder trabajar.
+"
+"157","Si pudiera seguir contando con las brigadas de salud de la cruz roja, tendría
+medicamentos dé la tención sin tener que pagar.
+"
+"158","Poder contar con el servicio médico nuevamente ya que aquí es el único lugar
+donde podemos acceder el sin ser discriminados.
+"
+"159","Qué nos permitan seguir contando con la brigada de salud de la cruz roja, nos
+han ayudado mucho con atención médica y medicamentos.
+"
+"160","Sería bueno que las instalaciones de la cruz roja fueran más grandes y con más
+sillas para no estar de pie o obstaculizar los pasillos.
+"
+"161","Servicio de urgencias las 24 horas en cruz roja nos permitiría tener un servicio
+médico más completo ya que no tenemos dinero para pagar.
+"
+"162","Mejorar el servicio con especialistas dé odontología, pediatras,ginecología nos
+ahorramos dinero porque estás consultas son muy costosas.
+"
+"163","Es necesario que las llamadas de las caracterizaciones sean más continuas,ya que
+así las ayudas llegan más rápido y seguidas.
+"
+"164","Me gustaría que la cruz roja,pueda expandirse a nivel nacional para que sigan
+brindando estas ayudas tan necesarias para los migrantes.
+"
+"165","Que la cruz roja siga recibiendo ayudas medicas así podes acceder a todos los
+servicios y ayudas que nos brindan sin discrinacion.
+"
+"166","Ojalá no quiten el servicio de salud en la cruz roja, gracias a ellos mis hijos
+han podido tener control médico.
+"
+"167","Quiero seguir contando con el servicio médico ya que gracias a él puedo tener un
+tratamiento y estabilidad en mi salud.
+"
+"168","Que se pueda abrir una sede más amplia para que incluyan servicio de
+especialistas y una farmacia que es fundamental para nosotros.
+"
+"169","Oportunidad laboral para los migrantes profesionales dándonos la oportunidad de
+trabajar le aportariamos económicamente al país.
+"
+"170","Tener una buena orientación,para poder acceder diferentes servicios y horarios
+que nos prestan en la cruz roja.
+"
+"171","Me gustaría poder tener un espacio más amplio para la recreación de los niños y
+cursos recreativos.
+"
+"172","Ampliaria la sala del espera es muy incómoda y tiene pocas sillas muchas veces
+estamos de pié esperando.
+"
+"173","Necesitamos una farmacia me parece que es muy importante, ya que así tendremos
+una orientación de la toma del medicamento.
+"
+"174","Contar con el servicio de caracterización para nosotros es importante,ya que con
+el puedo acceder a los diferentes servicios que me ofrecen.
+"
+"175","Me gustaría que las grandes organizaciones apoyaran a la cruz roja para que nos
+puedan seguir dando las ayudas económicas.
+"
+"176","Es muy importante que poder contar con más médicos por los ,dos que hay no
+tienen la capacidad para ver tantos niños y adultos.
+"
+"177","Un espacio más grande en sala de espera,estamos muy estrechos y de pie.
+"
+"178","Yo contrataría especialistas de pediatría, terapia respiratoria,y crecimiento y
+desarrollo ya que los niños lo necesitan.
+"
+"179","Me gustaría que la cruz roja nos siga brindado las brigadas de salud,ya que aquí
+puedo contar con medicamentos y laboratorios.
+"
+"180","Quitaría el requisito qué piden para dar la ayuda económica de las visitas a las
+casas ya que muchos no tenemos sitios fijo para vivir.
+"
+"181","Estuve en una consulta y me di cuenta que no cuentan con los insumos correctos
+como guantes,baja lenguas, biombos.
+"
+"182","Queremos continuar con las brigadas de salud y asi poder acceder a los
+tratamientos que vengo recibido y mejorar mi calidad de vida.
+"
+"183","Yo implementaría un espacio para que nos permita aprender manualidades de este
+país.
+"
+"184","Creo que la atención es buena ma parece que faltan camillas ya que muy
+importante para un chequeo médico completo.
+"
+"185","El servicio de Odontología es muy importante para nosotros ya que no contamos
+con dinero para pagar un tratamiento particular.
+"
+"186","Que la recepción sea más amplia y solo para la atención del paciente ya que está
+mezclada con medicamentos.
+"
+"187","Aumentar los servicios como odontología, dermatologia, oftalmología ya que
+necesitamos de estos servicios.
+"
+"188","Poder contar con especialistas como pediatría, odontología, ortopedia,
+oftalmología y imágenes diagnósticas para tener un mejor servicio.
+"
+"189","Poner un servicio de farmacia dónde la persona que entregué los medicamentos nos
+informe la manera correcta de tomarlo.
+"
+"190","Que las organizaciones aporten más dinero a la cruz roja,para recibir más ayudas
+ya que muchos no contamos con ellas.
+"
+"191","Pondría un servicio de urgencias las 24 horas ya que es el único sitio qué nos
+está prestando él servicio.
+"
+"192","Que implentararan más especialistas como pediatría y ginecología ya que hay
+muchas gestantes que no pueden tener sus controles completos.
+"
+"193","Salí del consultorio y me parece quedeberían tener los implementos adecuados
+para una consulta cómo el biombo y guantes.
+"
+"194","Creo que los médicos necesitan una auxiliar de enfermería, para que los asistan
+ya que hay muchos pacientes que requieren atención especial.
+"
+"195","Más personal en recepción eso nos ayudaría a que la atención sea más rápida.
+"
+"196","Me parece que la atención prestada es muy buena pero falta implementar,más
+consultoríos   médicos.
+"
+"197","Pondría 3 consultorios de odontología,ya que es fundamental tener ese servicio
+de los niños y adultos.
+"
+"198","Si nos dieran un permiso para trabajar,no habríamos tantos migrantes mendigando
+en las calles para comer.
+"
+"199","La veces que he venido he visto que la recepción es muy pequeña y no tenemos el
+espacio adecuado para todos los que llegamos yo la agrandari
+"
+"200","Insumos para los consultorios médicos como guantes, biombo ya que es
+indispensable para nuestra privacidad.
+"
+"201","Que haya una sala de triage para que así le den prioridad a los niños y adultos
+mayores y no tener que esperar mucho la atención médica.
+"
+"202","Deberían ampliar la recepción, dónde puedan poner más sillas muchos nos toca
+esperar de pie o afuera y obstaculizamos el paso.
+"
+"203","En los consultorios médicos veo que no hay un biombo y es muy importante porque
+para la privacidad del paciente.
+"
+"204","Agrandaria la sala de espera,muchas veces nos toca esperar en la calle o parados
+por el espacio estrecho.
+"
+"205","Sería bueno que hubiera más baños y no fueran mixtos por higiene.
+"
+"206","Deberían poner un servicio de urgencias las 24 horas así nos facilitaria el día
+de hoy tener un servicio médico.
+"
+"207","Crear más puntos de atención de la cruz roja en diferentes comunas ya que dinero
+para desplazarnos siempre a las citas médicas.
+"
+"208","Deberían implentrar una farmacia dónde un farmacéutico le entregué el
+medicamento a uno me sentiría más segura.
+"
+"209","Yo diría que falta consultorio donde puedan atender una emergencia que haya
+oxígeno, reanimador y un equipo de curaciones básicas.
+"
+"210","Es muy importante que tengan un ginecólogo en la sede porque hay muchas
+gestantes sin control ni atención en los hospitales.
+"
+"211","Destinataria más dinero a cruz roja para que puedan seguir dando las ayudas
+económicas,ya que muchos que nos quedamos sin la ayuda.
+"
+"212","Deberían implentrar una brigada continúa, así el día de hoy podríamos recibir
+algún servicio médico o de ayuda económica.
+"
+"213","Tener como 5 médicos generales así la atención sería continua y no tendríamos
+que esperar por el servicio hasta el otro año.
+"
+"214","Que para las próximas brigadas de salud,se pudieran implementar más servicios
+como odontología, pediatría para tener un servio más completo.
+"
+"215","Sería bueno que las brigadas de salud fueran más las largas, hoy vine y nos
+dicen que no saben cuándo hay servicio.
+"
+"216","Espero que el servicio médico se normalice para poder traer a mis hijos para
+continuar con los tratamientos médicos.
+"
+"217","Yo pondría un consultorio de inyectologia,he visto que no hay privacidad.
+"
+"218","Importante que en la entrada encontremos una recepción,el espacio donde me
+reciben es muy pequeño y no hay sillas .
+"
+"219","Mi idea es que la cruz roja nos siga llamando para las ayudas económicas, ya que
+a sido de gran ayuda.
+"
+"220","Un consultorio de enfermería donde tengan una camilla para poner las inyecciones
+y que sea una jefe enfermera la que ordena los medicamentos
+"
+"221","Implementar más servicios de especialistas en
+odontología,oftalmología,ginecología,pediatras mis hijos necesitan de estos.
+"
+"222","Incrementar las ayudas y recursos para la cruz roja,ya que hay muchos migrantes
+sin poder acceder a las ayudas y albergues.
+"
+"223","Crear una ludoteca para los niños para cuando los padres están en talleres o
+citas medicas ellos estén aprendiendo.
+"
+"224","Que incrementen las ayudas económicas que da la cruz roja,ya que estamos la
+espera de esa ayuda pero dicen que no tienen más presupuesto.
+"
+"225","Que hayan más líneas telefónicas para pedir citas médicas rápido, eso permitiría
+que nos atendieran a más personas y sería un buen servicio.
+"
+"226","Me gustaría que tuviera él servicio de urgencias las 24 horas,ya que es el único
+sitio donde nos han presentado el servicio.
+"
+"227","Que aumenten las ayudas económicas para que todos nos veamos beneficiados ya que
+todos estamos a la espera.
+"
+"228","Especialistas como pediatría, cardiología, oftalmología, ortopedia,ya que es muy
+importante para nosotros que tenemos diferentes diagnóstico
+"
+"229","Más especialistas de odontología, oftalmología, ginecología, pediatras. Para una
+atención más completa.
+"
+"230","Atención dé urgencias para los niños ya que ellos en cualquier momento se
+enferman y no tenemos más donde llevarlos.
+"
+"231","Mi idea es que aporten más dinero a la cruz roja para que las ayudas llegue a
+mas personas.
+"
+"232","El espacio es muy pequeño para atender a toda la población migrante, deberían
+tener grandes instalaciones para aumentar la atención.
+"
+"233","Un trato más humanizado para el personal de la cruz roja veo que tienen muchas
+actividades una sola persona.
+"
+"234","enfermera tienen que hacer muchas funciones y pienso que deberían de tener más
+personal para que ella pueda hacer su trabajo bien.
+"
+"235","La atención médica es muy demorada,creo que es por falta de personal médico y de
+enfermeras colapsa porque hay mucha gente.
+"
+"236","Tener acceso a ginecología soy gestante y no tengo controles ni ecografías ,me
+gustaría que lo implementarán para saber cómo viene el bebé.
+"
+"237","Más lineas telefonicas o por internet para facilitar las citas de las ayudas,
+nunca contestan y estamos perdiendo la oportunidad.
+"
+"238","Muy pequeño el espacio deberían construir un Cruz roja más amplio nos sentimos
+estrechos y nos toca esperar en la calle.
+"
+"239","Atención completa para los adultos donde nos rebicen bien un médico, que no sea
+de afán  que nos dedique más tiempo.
+"
+"240","Más apoyo a la cruz roja para que nos puedan seguir dando las ayudas económicas
+a todos los migrantes.
+"
+"241","Siento que deberían tener más enfermeras, la que está tiene muchas cosas por
+hacer y no puede hacer todo sola.
+"
+"242","Mi idea es poder contar con el servicio de Odontología y oftalmología y que
+capaciten al personal sobre humanización ya hay muchos migrantes
+"
+"243","Nos gustaría tener él servicio de odontología, oftalmología, ginecología,
+pediatría estos servicios son muy importantes para los niños.
+"
+"244","Los servicios de salud dé la cruz roja deberían Ser continuos,para tener una
+mejor calidad él día de hoy ya no hay más talleres.
+"
+"245","Llevó pidiendo una cita y no logro comunicarme, sería bueno que implementarán
+más líneas telefónicas para no quedarnos sin la oportunidad.
+"
+"246","Me gustaría que ampliarán las instalaciones de la cruz roja estamos muy
+estrechos y eso no permite una buena atención.
+"
+"247","La cruz roja es muy buena,pero me gustaría poder contar con el servicio de
+ginecología y toma de citología,para las gestantes migrantes.
+"
+"248","Tener los servicios de oncología, pediatría, ginecología,ya que es fundamental
+para tener los servicios de salud completos en la cruz roja.
+"
+"249","Es díficil obtener una cita para las ayudas, deberían implentrar más líneas
+telefónicas Pará que sea más fácil el servicio.
+"
+"250","Estoy inconforme porque pedí la ayuda económica y me la negaron nunca me
+visitarnos para saber sí la necesitaba solo nunca me llamaron.
+"
+"251","La infraestructura es muy pequeña y no tiene suficiente capacidad para tantas
+personas y en cuanto al sistema,colapsa por tanto migrante.
+"
+"252","Me gustaría que nos atiendan más rápido,faltan más médicos y cada cita se demora
+mucho por falta de profesionales.
+"
+"253","El servicio es bueno,pero la enfermera está muy ocupada y no puede atender bien
+porque tiene muchas funciones.
+"
+"254","Queremos contar con más especialistas como ortopedia, pediatría, enfermeras ,una
+enfermería con eso podemos tener un servicio completo
+"
+"255","Mi bebé lleva 3 semanas con vómito y diarrea y para acceder a una cita  en CRC
+es dificil,deseo atención rápida y eficaz ante una emergencia
+"
+"256","La infraestructura es muy pequeña y esto limita el número de personas que
+podemos recibir los servicios, deseo que se amplie el lugar.
+"
+"257","La atención prestada es muy buena me gustaría poder contar con una
+infraestructura más grande y con eso implementar más servicios .
+"
+"258","Deberían tener un servicio de urgencias las 24 horas para los niños, muchas
+veces están enfermos y no tenemos dónde llevarlos.
+"
+"259","Considero que la infraestructura no es suficiente para la demanda de personas
+que requieren este servicio y sería positivo si lo amplían.
+"
+"260","Cambiar o poner más teléfonos para que atiendan las llamadas,muchas veces
+llamamos todo el día y no se logra una cita.
+"
+"261","Especialistas para enfermedades crónicas, oftalmología,neuropediatras eso nos
+ayudaría a estar mejor de salud.
+"
+"262","Poner más líneas telefónicas, donde sí contesten y puedan dar más atención a las
+personas.
+"
+"263","Darmos la oportunidad de trabajar a los migrantes, asi podriomos pagar
+arriendo,comer, y tener una vida mas digna.
+"
+"264","Darnos apoyo en empleo, que en las empresas nos reciban sin tanto inconveniente
+a los migrantes.
+"
+"265","Me gustaria mas brigadas de salud en altos de la florida para los migrantes,
+estamos en abandono y no tenemos quien nos atienda.
+"
+"266","Mas ofertas laborales para los migrantes, estamos sin empleo y nos es dificil
+llevar de comer a mi familia.
+"
+"267","Dar la oportunidad  de trabajar a los migrantes, asi puedo pagar arriendo,
+comer, y tener salud.
+"
+"268","Hacer campañas de empleo para los migrantes,ya que en ningun lado nos dan
+trabajo por nuestra nacionalidad.
+"
+"269","Mas oportunidad laboral para los migrantes,estoy sin empleo y me es dificil
+ayudar a mi familia economicamente.
+"
+"270","Dar la oportunidad de trabajar a los migrantes estamos sin empleo y asi es
+dificil llevar el alimento a la familia.
+"
+"271","Darnos la oportunidad de trabajar a los venezolanos, ya que en este pais somos
+rechazados.
+"
+"272","No hay citas, llevo un mes sin atencion, se necesita atencion rapida y eficiente
+"
+"273","No me entregan mis examenes de laboratorio a tiempo y hay demoras
+"
+"274","No dieron medicamento porque asisti el dia anterior a la brigada de salud y el
+medicamento es acetaminofen y mi hijo tiene mucha fiebre
+"
+"275","Demora en el servicio, no me diron medicamentos porque no aparezco en el sistema
+"
+"276","No me entregaron mi medicamento  claritromicina, porque no lo cubre el plan de
+salud y mi salud depende de el
+"
+"277","Falta de informacion y medicamentos.
 "

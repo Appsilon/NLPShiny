@@ -1,21 +1,71 @@
 body {
   background-color: rgba(225, 223, 221, 0.2);
-  min-height: 611px;
-  margin: 0;
+
+  /* min-height: 611px; */
+  margin: 0 !important;
+
+  /* height:90%; */
 }
 
 .ms-Nav {
   background-color: white;
 }
 
+.third-column {
+  display: flex;
+  height: 100%;
+}
+
+.third-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ui.form .field {
+  margin: 0 0 0.3em;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 50px 1fr 50px;
-  grid-template-areas: "header_left header_right"
-  "sidenav main"
-  "footer footer";
+  grid-template-rows: 50px 1fr 25px;
+  grid-template-areas: "header_left header_right" "sidenav main" "footer footer";
   height: 100vh;
+}
+
+.grid-mini-2 {
+  display: grid;
+  grid-template-columns: 320px;
+  grid-template-rows: repeat(2, minmax(250px, 260px));
+  grid-template-areas: "seg5" "seg6";
+  height: 48vh;
+
+  /* min-height: 500px; */
+  padding: 0;
+  margin: 0;
+}
+
+.grid-mini-1-up {
+  display: grid;
+  grid-template-columns: 320px 320px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "seg1 seg2";
+  height: 24vh;
+  min-height: 250px;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-mini-1-down {
+  display: grid;
+  grid-template-columns: 220px 420px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "seg3 seg4";
+  height: 24vh;
+  min-height: 250px;
+  padding: 0;
+  margin: 0;
 }
 
 .grid-inside-up {
@@ -23,21 +73,30 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "well well";
-  height: 50vh;
+  height: 42vh;
+  min-height: 400px;
   padding: 0;
   margin: 0;
 }
 
-.grid-plot-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
-  grid-template-areas:
-            "y data empty1"
-            "y plot cat"
-            "y x    empty2";
-  height: 40vh;
+/*
+.tag-container {
   position:relative;
+}
+*/
+.drop-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  width: 263px;
+}
+
+.drop-container .ui.form {
+  width: 263px;
+}
+
+.ui.button {
+  line-height: 1.2em;
 }
 
 .form-columns {
@@ -45,7 +104,8 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "inputs empty45" "inputs button";
-  /*position:relative;*/
+
+  /* position:relative; */
 }
 
 .form-inputs {
@@ -60,11 +120,10 @@ body {
 
 .form-button #mod_form-update {
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
 .grid-form {
-
   height: auto;
   width: 25vw;
   padding: 0;
@@ -73,17 +132,56 @@ body {
 }
 
 .ms-DetailsList {
-  /*overflow: scroll;*/
+  /* overflow: scroll; */
   width: auto;
 }
 
 .ms-DetailsList > * {
-align-items: normal;
+  align-items: normal;
 }
 
-.well {
-  margin: 10px;
-  padding: 10px;
+/*
+element.style {
+  margin: 0;
+}
+*/
+
+/*
+.ui.segment:first-child {
+  margin-top: 10px;
+}
+*/
+.ui.button[id$='select_UI_id'] {
+  width: 231px;
+}
+
+.leaflet-pane > canvas {
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.filter-container {
+  margin: 10px 10px 0;
+  min-height: 400px;
+}
+
+.map-container {
+  min-height: 400px;
+  margin: 10px 10px 0;
+
+  /* padding: 10px 10px 0; */
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #d3d3d3;
+  border-width: 1px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* .well , */
+.ui.segment {
+  margin: 10px 10px 0 5px;
+  padding: 10px 10px 0 10px; /* 3 t rl b */
   border-radius: 4px;
   border-style: solid;
   border-color: #d3d3d3;
@@ -94,19 +192,49 @@ align-items: normal;
 
 .grid-inside-down {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "downarea";
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "downleft downright";
   height: 5vh;
-  padding: 10px;
+
+  /* max-width: calc(100vw - 320px); */
+  padding: 5px 0 0 5px;
   position: relative;
+}
+
+.downleft {
+  grid-area: downleft;
+  max-width: 300px;
+}
+
+.downright {
+  grid-area: downright;
+  margin: 10px 10px 0;
+
+  /* max-width: 95vw; */
+  max-height: 35vh;
+  width: 64.5vw;
+
+  /*  padding: 10px 10px 0; */
 }
 
 .parent {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  max-width:300px;
+  max-width: 520px;
+}
+
+.calendar1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.ui.selection.dropdown,
+.ui.form input[type=number],
+.ms-TextField-fieldGroup {
+  border: 1px solid #000;
 }
 
 .ui.fluid.selection.dropdown .ui.form {
@@ -123,67 +251,62 @@ align-items: normal;
   text-decoration: none;
 }
 
-.ms-Nav-link:not(:hover){
+.ms-Nav-link:not(:hover) {
   text-decoration: none;
 }
 
 /* Assign grid instructions to our parent grid container */
 
-.plot-container{
+.plot-container {
   grid-area: plot;
   max-width: 500px;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   position: relative;
-  /*overflow-y: hidden;*/
+
+  /* overflow-y: hidden; */
 }
 
-.y-container{
+.y-container {
   grid-area: y;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*max-width: 150px;*/
-}
 
-.x-container {
-  grid-area: x;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* max-width: 150px; */
 }
 
 .x-container .ui.form .field {
-  position:fixed;
+  position: fixed;
   z-index: 2;
 }
 
-
-.data-container{
+.data-container {
   grid-area: data;
-  padding-top: 0px;
+  padding-top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cat-container{
+.cat-container {
   grid-area: cat;
   padding-top: 30px;
 }
+
 /* Give every child element its grid name */
 
 .header_left {
   grid-area: header_left;
   background-color: #fff;
-  padding: 6px 0px 6px 10px;
+  padding: 6px 0 6px 10px;
   display: flex;
 }
 
 .header_right {
   grid-area: header_right;
   background-color: #fff;
-  padding: 6px 0px 6px 10px;
+  padding: 6px 0 6px 10px;
   display: flex;
 }
 
@@ -201,19 +324,20 @@ align-items: normal;
 .main {
   grid-area: main;
   background-color: #faf9f8;
-  padding-left: 40px;
-  padding-right: 32px;
+  padding-left: 15px;
+  padding-right: 20px;
   margin-bottom: 0;
   padding-bottom: 0;
   max-width: calc(100vw - 320px);
-  max-height: calc(100vh - 80px);
+
+  /* max-height: calc(100vh - 80px); */
   overflow: auto;
 }
 
 .footer {
   grid-area: footer;
   background-color: #f3f2f1;
-  padding: 0px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,8 +350,12 @@ align-items: normal;
 }
 
 .title {
-  padding: 0px 14px 0px 14px;
+  padding: 0 14px 0 14px;
   color: #737373;
-  margin: 6px 0px 6px 10px;
+  margin: 6px 0 6px 10px;
   border-left: 1px solid darkgray;
+}
+
+.ui.form .inline.field > label {
+  width: 120px;
 }

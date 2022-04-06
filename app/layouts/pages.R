@@ -1,95 +1,162 @@
 box::use(
-  shiny[bootstrapPage, NS, renderText, tags, textOutput, tagList, div, wellPanel],
-)
-
-box::use(
+  shiny[bootstrapPage, NS, renderText, tags,
+        textOutput, tagList, div, wellPanel,
+        br,h2,h4],
   shiny.fluent[IconButton.shinyInput, Text, CommandBar, Stack],
-)
-
-box::use(
-  shiny.semantic[semanticPage, tabset, segment],
-)
-
-box::use(
+  shiny.semantic[semanticPage, tabset, segment, splitLayout],
   shiny.router[...]
 )
 
 box::use(
-  app / view / service_type,
+  app / view / filter,
   app / view / map,
-  app / view / submit,
   app / view / table,
   app / view / tag,
-  app / view / unify,
-  app / view / form
+  app / view / service_type,
+  app / view / form,
+  app / layouts / cards[...],
 )
 
 #' @export
-inputFormPage <- tagList(
-  div(class="grid-form",
-      wellPanel(
-        div(class="parent",
-            form$ui("mod_form")
-        )
+input_form_page <- function(id){
+  ns<-NS(id)
+tagList(
+  div(
+    class = "grid-form",
+      div(
+        class = "parent",
+        form$ui(ns("ns_form"))
       )
   )
 )
+}
 
 #' @export
-card1 <- div(
-  Stack(
-    tokens = list(childrenGap = 15),
-    Text(
-      variant = "xLarge",
-      "Welcome, this example was built with view, shiny.fluent, shiny.router and shiny.semantic !",
-      block = F
+intro_page <- function(){
+  tagList(
+  div(style="margin-left:4px;",
+      br(),
+      h2("Introduction")
+      ,br(),
+      div(style="max-width:33vw;",
+        segment(style="padding:20px;",
+                div(
+                  Stack(
+                    tokens = list(childrenGap = 15),
+                    Text(
+                      variant = "xLarge",
+                      "Business problem",
+                      block = F
+                    ),
+                    lapply(card7list, function(x) {Text(x)
+                    })
+                  )
+                )
+        ),
+        segment(style="padding:20px;",
+                div(
+                  Stack(
+                    tokens = list(childrenGap = 15),
+                    Text(
+                      variant = "xLarge",
+                      "Which model is used and how?",
+                      block = F
+                    ),
+                    lapply(card8list, function(x) {Text(x)
+                    })
+                  )
+                )
+        )
+      ),
+  )
+)
+}
+
+howto_page <- function(map_ns){
+  tagList(
+  div(style="margin-left:4px;",
+      br(),
+      h2("Pages functionality")
+      ,br()
+  ),
+  splitLayout(style = "background:#FFFFFF;",
+    tagList(
+  div(style="margin-left:5px;",
+    h4("First page: Tag feedback")
+  ),
+  div(
+    class = "grid-mini-1-up",
+      segment(style="padding:20px;",
+        card1
+      ),
+      segment(style="padding:20px 10px 0 10px;",
+              #
+              #     ns call
+              #
+        card2(map_ns)
+      )
     ),
-    Text(
-      "shiny.fluent is a package that allows you to build Shiny apps using Microsoft's Fluent ui."
+  div(
+    class = "grid-mini-1-down",
+    segment(style="padding:20px;",
+            card3
     ),
-    Text(
-      "shiny.router allows the functioning of the different pages at the left."
-    ),
-    Text(
-      "shiny.semantic allows beautiful tabs in this example."
+    segment(style="padding:20px;",
+            card4
     )
   )
-)
-
-#' @export
-aboutPage <- tagList(
-  wellPanel(style="max-width:1000px",#class="grid-form",
-            div(style="padding:20px;",
-                card1
-            )
-  )
-)
-
-#' @export
-mainPage <- tagList(
-  div(class="grid-inside-up"
-      , segment(
-        submit$ui("mod_submit")
+  ),
+  tagList(
+    div(style="margin-left:5px;",
+      h4("2nd page: Database")
+    ),
+    div(
+      class = "grid-mini-2",
+      div(class="seg5",
+      segment(style="padding:20px;min-height:240px;",
+              card5
       )
-      , div(class="map-container",
-        map$ui("nsMap")
+      ),
+      div(class="seg6",
+      segment(style="padding:20px;",
+              card6
+      )
+    )
+   )
+  )
+ )
+)
+}
+
+#' @export
+main_page <- function(id){
+  ns<-NS(id)
+  tagList(
+  div(class="grid-inside-up",
+      div(class="filter-container",
+          segment(style="min-height:400px;",
+                  filter$ui(ns("ns_filter"))
+          )
+      ),
+      div(class="map-container",
+          map$ui(ns("ns_map"))
       )
   )
   , div(class="grid-inside-down",
         div(class="downleft"
-            , tag$ui("mod_tag")
-            , service_type$ui("cash")
-            , service_type$ui("health")
+            , tag$ui(ns("ns_tag"))
+            , service_type$ui(ns("ns_cash"),"cash")
+            , service_type$ui(ns("ns_health"),"health")
         )
-        , div(class="downright",# style="max-height:35vh;width:63vw;",
+        , div(class="downright",
               semanticPage(
                 tabset(tabs =
                          list(
-                           list(menu = "Table"
+                           list(menu = "Feedback and metadata"
                                 , content =
                                   tagList(
-                                    div(#style="max-height:300px",
-                                      table$ui("mod_table")
+                                    div(
+                                      table$ui(ns("ns_table"))
                                     )
                                   )
                            )
@@ -98,24 +165,21 @@ mainPage <- tagList(
                                     tagList(
                                       div(style="padding:20px;",
                                           card1
-                                          # verbatimTextOutput("irisText"
-                                          #                    , height = 640
                                       )
                                     )
                            )
-                         ),
-                       active = "second_tab",
-                       id = "exampletabset"
+                         )
                 )
               )
         )
   )
 )
-
+}
 
 #' @export
-pages_menu  <- c(list(route("/", mainPage)
-                 ,route("inputform",inputFormPage)
-                 ,route("about",aboutPage)
+pages_menu <- c(list(
+  route("/", main_page("app")),
+  route("inputform", input_form_page("app")),
+  route("howto", howto_page("app")),
+  route("intro", intro_page())
 ))
-

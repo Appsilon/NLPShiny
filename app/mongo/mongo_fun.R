@@ -4,107 +4,99 @@ box::use(
 
 box::use(
   app / mongo / mongo_secret[...],
-  app / objects / functions_NLP[...],
+  app / logic / functions_NLP[...],
   app / objects / objects_NLP[...]
 )
 
-##################################
-#
-#   mongo connection is enabled by default
-#
-###################################
-
-# options_mongodb = list(
-#   "host" = "cyto.s17ph.mongodb.net",
-#   "username" = "ds4a_user",
-#   "password" = "passwordds4a"
-# )
-
 #' @export
-connectdb <- function(collectionName,databaseName
-                      # ,options_mongodb1=options_mongodb
-                      ) {
-  # print(options()$mongodb$username)
+select_columns <- function(dataset, unwanted_columns) {
+  filter_cols <- setdiff(colnames(dataset), unwanted_columns)
 
-  db <- tryCatch(
-    mongo(collection = collectionName,
-          url = sprintf(
-            "mongodb+srv://%s:%s@%s/%s%s",
-            options.mongodb$username,
-            options.mongodb$password,
-            options.mongodb$host,
-            databaseName
-            ,"?sockettimeoutms=1200000") )
-    , error = function(e) {print(paste("42 no internet"))
-      ; "no internet" } )
-  return(db)
-}
+  no_idea <- setdiff(filter_cols, "idea")
 
-#' @export
-readData <- function(connection,find_string, mylimit,mysort) {
-  data <-
-    # tryCatch(
-    connection$find(find_string, limit=mylimit, sort=mysort)
-  # , error = function(e) {print(paste("44 no internet")) ; "no internet" } )
-  return(data)
+  colnames(dataset)[which(names(dataset) == "idea")] <- "feedback"
+
+  dataset <- dataset[, c("feedback", no_idea)]
+
+  return(dataset)
 }
 
 #' @export
 basic_colombia <- function() {
+  collection_name <- "colombia_big"
+  database_name <- "kujakuja"
 
-  ######################################################################
-  #
-  #  connecting mongodb !!!
-  #
-  ######################################################################
+  db_col <- connectdb(collection_name, database_name)
 
-  collectionName <- "colombia_big"
-  databaseName   <- "kujakuja"
+  center_init <- "Cundinamarca"
+  # find_string <- paste0('{"state":"', center_init, '"}')
 
-  db58<<-db_col <- connectdb(collectionName,databaseName)
+  find_string <- paste(
+    "{\"service_type\":{\"$in\" : [\"Healthcare\",\"Cash Transfer\"] },",
+    "\"state\":\"Cundinamarca\",",
+    "\"created_at_tz_posix\":{\"$gt\":{\"$date\":\"2016-01-01T00:00:00Z\"}, \"$lt\":{\"$date\":\"2022-03-26T23:59:59Z\"}},",
+    "\"satisfied\":false}"
+  )
 
-  center_init<-"Cundinamarca"
-  find_string<- paste0('{"state":"',center_init,'"}')
-
-  dataset <- readData(db_col,find_string, 1500,
-                      paste0('{\"$natural\":',-1,'}')
+  dataset <- read_data(
+    db_col, find_string, 1500,
+    paste0('{\"$natural\":', -1, "}")
   )
 
   dataset <- colombia_coord_date(dataset)
 
-  filter_cols <- setdiff(colnames(dataset),unwanted_columns)
-
-  no_idea <- setdiff(filter_cols,"idea")
-
-  dataset<-dataset[,c("idea",no_idea)]
-
+  dataset <- select_columns(dataset, unwanted_columns)
 }
-# #' @export
-#' options(mongodb = list(
-#'   "host" = "cyto.s17ph.mongodb.net",
-#'   "username" = "ds4a_user",
-#'   "password" = "passwordds4a"
-#' ))
-
-
 
 #' @export
-basic_africa <- function(){
+basic_africa <- function() {
+  collection_name <- "africa_big"
+  database_name <- "kujakuja"
 
-  collectionName <- "africa_big"
-  databaseName   <- "kujakuja"
-
-  if(!exists("db_afr")){
-    db_afr <- connectdb(collectionName,databaseName)
+  if (!exists("db_afr")) {
+    db_afr <- connectdb(collection_name, database_name)
   }
 
-  find_string<- paste0('{"country_name":"',input$africa_country_input,'"'
-                       ,',"location_name":"',input$center_input,'"}'
+  find_string <- paste0(
+    '{"country_name":"', input$africa_country_input, '"',
+    ', "location_name":"', input$center_input, '"}'
   )
-  dataset <- readData(db_afr,find_string,input$max_input,
-                      paste0('{\"$natural\":',input$old_new_input,'}')
+  dataset <- read_data(
+    db_afr, find_string, input$max_input,
+    paste0('{\"$natural\":', input$old_new_input, "}")
   )
   dataset <- africa_coord_date(dataset)
+
+  dataset <- select_columns(dataset, unwanted_columns)
+}
+
+#' @export
+connectdb <- function(collection_name, database_name) {
+  db <- tryCatch(
+    mongo(
+      collection = collection_name,
+      url = sprintf(
+        "mongodb+srv://%s:%s@%s/%s%s",
+        options.mongodb$username,
+        options.mongodb$password,
+        options.mongodb$host,
+        database_name,
+        "?sockettimeoutms=1200000"
+      )
+    ),
+    error = function(e) {
+      print(paste("42 no internet"))
+      "no internet"
+    }
+  )
+  return(db)
+}
+
+#' @export
+read_data <- function(connection, find_string, mylimit, mysort) {
+  data <-
+    connection$find(find_string, limit = mylimit, sort = mysort)
+  return(data)
 }
 
 ######################################################################
@@ -114,15 +106,19 @@ basic_africa <- function(){
 ######################################################################
 
 #' @export
-# saveData <- function(data,collectionName,databaseName) {
-#   db <- tryCatch(mongo(collection = collectionName,
-#                        url = sprintf(
-#                          "mongodb+srv://%s:%s@%s/%s",
-#                          options()$mongodb$username,
-#                          options()$mongodb$password,
-#                          options()$mongodb$host,
-#                          databaseName)), error = function(e) {print(paste("25 no internet"))
-#                            ; "no internet" } )
-#   # data <- as.data.frame(data)
-#   db$insert(data)
-# }
+save_data <- function(data, collection_name, database_name) {
+  db <- tryCatch(mongo(
+    collection = collection_name,
+    url = sprintf(
+      "mongodb+srv://%s:%s@%s/%s",
+      options.mongodb$username,
+      options.mongodb$password,
+      options.mongodb$host,
+      database_name
+    )
+  ), error = function(e) {
+    print(paste("25 no internet"))
+    "no internet"
+  })
+  db$insert(data)
+}

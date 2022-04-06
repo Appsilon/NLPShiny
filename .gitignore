@@ -1,3 +1,4 @@
 renv/
 .Rproj.user/
 .Rhistory
+app/mongo/mongo_secret.R

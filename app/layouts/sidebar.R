@@ -12,42 +12,59 @@ box::use(
 )
 
 #' @export
-sidebarStyle <- list(
+sidebar_style <- list(
   root = list(
-    height = '100%',
-    boxSizing = 'border-box',
-    border = '1px solid #eee',
-    overflowY = 'auto'
+    height = "100%",
+    boxSizing = "border-box",
+    border = "1px solid #eee",
+    overflowY = "auto"
   )
 )
 
 #' @export
-listLinkPages<-list(list(links = list(
+list_link_pages <- list(
   list(
-    name = 'Main',
-    url = '#!/',
-    key = 'home',
-    isExpanded = FALSE
-  ),
-  list(
-    name = 'InputForm',
-    url = paste0('#!/', "inputform"),
-    key = 'inputForm',
-    isExpanded = FALSE
-  ),
-  list(
-    name = 'About',
-    url = paste0('#!/', "about"),
-    key = 'about',
-    isExpanded = FALSE
+    links = list(
+      list(
+        name = "Tag feedback",
+        url = "#!/",
+        key = "home",
+        isExpanded = FALSE,
+        icon = "home"
+      ),
+      list(
+        name = "Database",
+        url = paste0("#!/", "inputform"),
+        key = "input_form",
+        isExpanded = FALSE,
+        icon = "archive"
+      ),
+      list(
+        name = "How to",
+        url = paste0("#!/", "howto"),
+        key = "howto",
+        isExpanded = FALSE,
+        icon = "StatusCircleQuestionMark"
+      ),
+      list(
+        name = "Introduction",
+        url = paste0("#!/", "intro"),
+        key = "intro",
+        isExpanded = FALSE,
+        icon = "DocumentSet"
+      )
+    )
   )
-)))
+)
 
 #' @export
 sidebar <- tagList(
   Nav(
-    groups = listLinkPages,
-    initialSelectedKey = 'home',
-    styles = sidebarStyle
+    groups = list_link_pages,
+    initialSelectedKey = "home",
+    styles = sidebar_style
   )
 )
+
+
+
