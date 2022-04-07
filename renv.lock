@@ -649,6 +649,14 @@
       "Hash": "cdc87ecd81934679d1557633d8e1fe51",
       "Requirements": []
     },
+    "maps": {
+      "Package": "maps",
+      "Version": "3.4.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "b3d98a967ec17c80f795719529812fa0",
+      "Requirements": []
+    },
     "markdown": {
       "Package": "markdown",
       "Version": "1.1",
