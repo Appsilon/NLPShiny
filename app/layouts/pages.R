@@ -88,10 +88,10 @@ howto_page <- function(map_ns) {
   ),
   div(
     class = "grid-mini-1-up",
-      segment(style="padding:20px;",
+      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
         card1
       ),
-      segment(style="padding:20px 10px 0 10px;",
+      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
               #
               #     ns call
               #
@@ -100,10 +100,10 @@ howto_page <- function(map_ns) {
     ),
   div(
     class = "grid-mini-1-down",
-    segment(style="padding:20px;",
+    segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
             card3
     ),
-    segment(style="padding:20px;",
+    segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
             card4
     )
   )
@@ -113,17 +113,16 @@ howto_page <- function(map_ns) {
       h4("2nd page: Database")
     ),
     div(
-      class = "grid-mini-2",
-      div(class="seg5",
-      segment(style="padding:20px;min-height:240px;",
+      div(class="grid-mini-2-up",
+      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
               card5
       )
       ),
-      div(class="seg6",
-      segment(style="padding:20px;",
+      div(class="grid-mini-2-down",
+      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
               card6
       )
-    )
+      )
    )
   )
  )

@@ -34,14 +34,24 @@ body {
   height: 100vh;
 }
 
-.grid-mini-2 {
+.grid-mini-2-up {
   display: grid;
   grid-template-columns: 320px;
-  grid-template-rows: repeat(2, minmax(250px, 260px));
-  grid-template-areas: "seg5" "seg6";
-  height: 48vh;
+  grid-template-rows: 1fr;
+  grid-template-areas: "seg2-1";
+  height: 27vh;
+  min-height: 250px;
+  padding: 0;
+  margin: 0;
+}
 
-  /* min-height: 500px; */
+.grid-mini-2-down {
+  display: grid;
+  grid-template-columns: 320px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "seg2-2";
+  height: 27vh;
+  min-height: 250px;
   padding: 0;
   margin: 0;
 }
@@ -51,7 +61,7 @@ body {
   grid-template-columns: 320px 320px;
   grid-template-rows: 1fr;
   grid-template-areas: "seg1 seg2";
-  height: 24vh;
+  height: 27vh;
   min-height: 250px;
   padding: 0;
   margin: 0;
@@ -62,7 +72,7 @@ body {
   grid-template-columns: 220px 420px;
   grid-template-rows: 1fr;
   grid-template-areas: "seg3 seg4";
-  height: 24vh;
+  height: 27vh;
   min-height: 250px;
   padding: 0;
   margin: 0;
@@ -146,11 +156,10 @@ element.style {
 }
 */
 
-/*
 .ui.segment:first-child {
   margin-top: 10px;
 }
-*/
+
 .ui.button[id$='select_UI_id'] {
   width: 231px;
 }
@@ -167,7 +176,7 @@ element.style {
 
 .map-container {
   min-height: 400px;
-  margin: 10px 10px 0;
+  margin: 20px 10px 0;
 
   /* padding: 10px 10px 0; */
   border-radius: 5px;

@@ -54,11 +54,11 @@ server <- function(id, vars_unify) {
 
     output$input_box1 <- renderUI({
       div(
-        style = "width:500px;",
+        style = "width:500px;margin-top:30px;",
         segment(
           form(
             div(
-              style = "text-align:center;",
+              style = "text-align:center;padding-top:15px;",
               h3("Add an entry to the database")
             ),
             br(),

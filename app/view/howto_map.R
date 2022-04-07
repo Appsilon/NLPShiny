@@ -12,7 +12,7 @@ box::use(
 
 ui <- function(id) {
   ns <- NS(id)
-  plotOutput(ns("minimap_plot"), height = 160)
+  plotOutput(ns("minimap_plot"), height = 150)
 }
 
 #
