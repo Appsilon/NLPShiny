@@ -13,13 +13,21 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Install curl-dependency
+        run: |
+          sudo apt-get update && sudo apt-get upgrade
+
       - name: Install libgdal
         run: |
-          sudo apt-get install libgdal-dev
+          sudo apt-get install -y libgdal-dev
 
       - name: Install curl-dependency
         run: |
-          sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev
+          sudo apt-get install -y libcurl4-openssl-dev
+
+      - name: Install mongo-dependency
+        run: |
+          sudo apt-get update && sudo apt-get install -y libssl-dev libsasl2-dev
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
