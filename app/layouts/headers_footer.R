@@ -12,7 +12,7 @@ far_items <- list(
     text = "About",
     ariaLabel = "Info",
     iconOnly = F,
-    href = "https://github.com/fernandoroa/NLPShiny_mod/",
+    href = "https://github.com/Appsilon/NLPShiny/tree/mod_and_rhino",
     iconProps = list(
       iconName = "Info"
     )
