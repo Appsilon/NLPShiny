@@ -55,13 +55,13 @@ repository, see above. In the notebook, the accepted model is SVC
 
 ### What is ready ?
 
--   The module of the selectors, upper left, called submit
+-   The module of the selectors, upper left, called filter
 -   The module of the table, bottom right
 -   The module of the tag button, bottom left: tag
 -   The module of the services, bottom left, they handle cash and health
     subsetting after tagging
 -   The module map, upper right
--   The module unify, which integrates inputs of submit, tag and
+-   The module unify, which integrates inputs of filter, tag and
     services for the map and table outputs
 -   module form, for adding entries to mongodb in real time
 -   Third page with workflow (How to)
