@@ -3,7 +3,7 @@ box::use(
 )
 
 box::use(
-  app / mongo / mongo_secret[...],
+  # app / mongo / mongo_secret[...],
   app / logic / functions_NLP[...],
   app / objects / objects_NLP[...]
 )
@@ -76,9 +76,12 @@ connectdb <- function(collection_name, database_name) {
       collection = collection_name,
       url = sprintf(
         "mongodb+srv://%s:%s@%s/%s%s",
-        options.mongodb$username,
-        options.mongodb$password,
-        options.mongodb$host,
+        Sys.getenv("MONGO_USERNAME"),
+        # options.mongodb$username,
+        Sys.getenv("MONGO_PASSWORD"),
+        # options.mongodb$password,
+        # options.mongodb$host,
+        Sys.getenv("MONGO_HOST"),
         database_name,
         "?sockettimeoutms=1200000"
       )
