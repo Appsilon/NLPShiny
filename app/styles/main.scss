@@ -156,10 +156,6 @@ element.style {
 }
 */
 
-.ui.segment:first-child {
-  margin-top: 10px;
-}
-
 .ui.button[id$='select_UI_id'] {
   width: 231px;
 }
@@ -197,6 +193,10 @@ element.style {
   border-width: 1px;
   overflow-x: auto;
   background-color: #fff;
+}
+
+.ui.segment:first-child {
+  margin-top: 10px;
 }
 
 .grid-inside-down {

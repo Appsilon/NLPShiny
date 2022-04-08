@@ -1,3 +1,5 @@
+setwd("../../")
+
 box::use(
   shiny[testServer],
   testthat[...],
