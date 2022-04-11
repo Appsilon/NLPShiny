@@ -62,18 +62,7 @@ server <- function(id,
 
       disable("tag_button")
 
-      if (T) {
-        dataset <- vars_unify$dataset_whole()
-      }
-      #
-      #   initial datasets
-      #
-
-      if (file.exists("app/outfiles/selection.csv")) {
-        file.remove("app/outfiles/selection.csv")
-      }
-
-      write.csv(tolower(dataset[, "feedback"]), "app/outfiles/selection.csv", row.names = T)
+      dataset <- vars_unify$dataset_whole()
 
       #
       #   make dfs for tagging

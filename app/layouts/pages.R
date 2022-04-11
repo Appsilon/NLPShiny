@@ -11,6 +11,7 @@ box::use(
   app / view / filter,
   app / view / map,
   app / view / table,
+  app / view / wordcloud,
   app / view / tag,
   app / view / service_type,
   app / view / form,
@@ -151,8 +152,8 @@ main_page <- function(id) {
         )
         , div(class="downright",
               semanticPage(
-                tabset(tabs =
-                         list(
+                tabset(id = ns("my_tabset"),
+                  tabs = list(
                            list(menu = "Feedback and metadata"
                                 , content =
                                   tagList(
@@ -160,12 +161,13 @@ main_page <- function(id) {
                                       table$ui(ns("ns_table"))
                                     )
                                   )
+                                , id = "table_tab"
                            )
-                           , list(menu = "Details"
+                           , list(menu = "Word Cloud"
                                   , content =
                                     tagList(
                                       div(style="padding:20px;",
-                                          card1
+                                          wordcloud$ui(ns("ns_wordcloud"))
                                       )
                                     )
                            )

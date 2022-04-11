@@ -44,6 +44,9 @@ basic_colombia <- function() {
 
   dataset <- colombia_coord_date(dataset)
 
+  #
+  # idea change to feedback
+  #
   dataset <- select_columns(dataset, unwanted_columns)
 }
 
@@ -65,6 +68,10 @@ basic_africa <- function() {
     paste0('{\"$natural\":', input$old_new_input, "}")
   )
   dataset <- africa_coord_date(dataset)
+
+  #
+  # idea to feedback
+  #
 
   dataset <- select_columns(dataset, unwanted_columns)
 }

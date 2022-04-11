@@ -3,3 +3,4 @@
 app/mongo/mongo_secret.R
 README.Rmd
 .Renviron
+app/outfiles/

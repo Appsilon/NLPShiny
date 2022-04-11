@@ -302,6 +302,8 @@ server <- function(id) {
         disable("health_select_UI_id1", asis = T)
         disable("cash_select_UI_id2", asis = T)
         disable("health_select_UI_id2", asis = T)
+        disable("app-ns_wordcloud-trigram_subset_button", asis = T)
+
         rv$allow_sub <- F
         rv$submit <- rv$submit+1
 
@@ -466,18 +468,12 @@ server <- function(id) {
 
           rv$lat <- afr_locations_coord[which(afr_locations_coord$location_name %in% input$center_input_2), ]$lat
           rv$lng <- afr_locations_coord[which(afr_locations_coord$location_name %in% input$center_input_2), ]$lng
-        }
-        ##
+        } # else Africa
+
         rv$dataset <- select_columns(rv$dataset, unwanted_columns)
 
         if (file.exists("app/outfiles/selection.csv")) {
           file.remove("app/outfiles/selection.csv")
-        }
-
-        if (input$region_input == 1) {
-          rv$height <- 350
-        } else {
-          rv$height <- 390
         }
 
         write.csv(tolower(rv$dataset[, "feedback"]),

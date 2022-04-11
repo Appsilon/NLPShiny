@@ -9,7 +9,7 @@ box::use(
     bindEvent,
     observe
   ],
-  shinyjs[enable]
+  shinyjs[enable, disable]
 )
 
 box::use(
@@ -23,7 +23,8 @@ box::use(
 #' @return list with data.frame and categ. and numeric variables
 
 server <- function(id, dataset_init, vars_filter,
-                   vars_tag, vars_cash, vars_health) {
+                   vars_tag, vars_cash, vars_health,
+                   vars_wordcloud) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
     center_init <- "Cundinamarca"
@@ -37,13 +38,12 @@ server <- function(id, dataset_init, vars_filter,
       region = 1,
       lat = lat1,
       lng = lng1,
-      active_tag = 0
+      active_tag = 0,
+      subset = 0
     )
 
     observe({
-      values[["dataset"]] <- vars_filter$dataset()
-      values[["dataset_whole"]] <- vars_filter$dataset()
-
+      values[["dataset_whole"]] <- values[["dataset"]] <- vars_filter$dataset()
       values[["region"]] <- vars_filter$region()
       values[["lat"]] <- vars_filter$lat()
       values[["lng"]] <- vars_filter$lng()
@@ -54,8 +54,7 @@ server <- function(id, dataset_init, vars_filter,
     }) |> bindEvent(vars_filter$submit(), ignoreInit = T)
 
     observe({
-      values[["dataset"]] <- vars_tag$dataset_tag()
-      values[["dataset_whole"]] <- vars_tag$dataset_tag()
+      values[["dataset_whole"]] <- values[["dataset"]] <- vars_tag$dataset_tag()
       values[["cash_cat"]] <- vars_tag$cash_cat()
       values[["health_cat"]] <- vars_tag$health_cat()
       values[["active_tag"]] <- values$active_tag + 1
@@ -63,11 +62,19 @@ server <- function(id, dataset_init, vars_filter,
 
     observe({
       values[["dataset"]] <- vars_cash$dataset_subset()
-    }) |> bindEvent(vars_cash$dataset_subset(), ignoreInit = T)
+      values[["subset"]] <- values[["subset"]]+1
+      disable("app-ns_wordcloud-trigram_subset_button", asis = T)
+    }) |> bindEvent(vars_cash$subset_action(), ignoreInit = T)
 
     observe({
       values[["dataset"]] <- vars_health$dataset_subset()
-    }) |> bindEvent(vars_health$dataset_subset(), ignoreInit = T)
+      values[["subset"]] <- values[["subset"]]+1
+      disable("app-ns_wordcloud-trigram_subset_button", asis = T)
+    }) |> bindEvent(vars_health$subset_action(), ignoreInit = T)
+
+    observe({
+      values[["dataset"]] <- vars_wordcloud$dataset_trigram()
+    }) |> bindEvent(vars_wordcloud$dataset_trigram(), ignoreInit = T)
 
     return(
       list(
@@ -85,6 +92,9 @@ server <- function(id, dataset_init, vars_filter,
         }),
         health_cat = reactive({
           values$health_cat
+        }),
+        subset = reactive({
+          values$subset
         }),
         region = reactive({
           values$region

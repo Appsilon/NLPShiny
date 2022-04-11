@@ -8,6 +8,8 @@ box::use(
   ],
   shinyjs[useShinyjs, onclick, toggle],
   shiny.router[make_router],
+  shiny.semantic[update_tabset],
+  utils[write.csv]
 )
 
 box::use(
@@ -24,6 +26,7 @@ box::use(
   app / view / service_type,
   app / view / map,
   app / view / table,
+  app / view / wordcloud,
   app / view / tag,
   app / view / unify,
   app / view / howto_map,
@@ -31,6 +34,11 @@ box::use(
 )
 
 dataset_init <- basic_colombia()
+
+write.csv(tolower(dataset_init[, "feedback"]),
+          "app/outfiles/selection.csv",
+          row.names = T
+)
 
 router <- purrr::lift(make_router)(pages_menu)
 
@@ -93,14 +101,14 @@ server <- function(id) {
     #
     #  gather vars and unify
     #
-
     vars_unify <- unify$server(
       "ns_unify",
       dataset_init,
       vars_filter,
       vars_tag,
       vars_cash,
-      vars_health
+      vars_health,
+      vars_wordcloud
     )
 
     #
@@ -114,11 +122,15 @@ server <- function(id) {
     #
     # table
     #
-
     table$server(
       "ns_table", dataset_init,
       vars_unify
     )
+
+    #
+    # wordcloud
+    #
+    vars_wordcloud <- wordcloud$server("ns_wordcloud", vars_unify, dataset_init)
 
     #
     # form page
@@ -136,6 +148,11 @@ server <- function(id) {
         },
         asis = TRUE
       )
+
+      onclick("app-ns_wordcloud-trigram_subset_button",
+              update_tabset(session, "my_tabset", "table_tab"),
+              asis = T)
+
     })
   })
 }

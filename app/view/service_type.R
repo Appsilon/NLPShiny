@@ -44,7 +44,7 @@ server <- function(id, service,
                    vars_filter) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
-    rv <- reactiveValues()
+    rv <- reactiveValues(subset_action=0)
     rv$alist <- list()
 
     caps_id <- gsub("(^[[:alpha:]])", "\\U\\1", service, perl = TRUE)
@@ -86,7 +86,6 @@ server <- function(id, service,
         choices = vars_unify[[paste0(service, "_cat")]](),
         value   = vars_unify[[paste0(service, "_cat")]]()[1]
       )
-
       rv$alist$ds_copy <- vars_unify$dataset_whole()
     })
 
@@ -121,10 +120,14 @@ server <- function(id, service,
       write.csv(tolower(rv$dataset[, "feedback"]), "app/outfiles/selection.csv", row.names = T)
 
       rv$alist$ds_copy <- vars_unify$dataset_whole()
+
+      rv$subset_action <- rv$subset_action+1
+
     })
 
     return(
       list(
+        subset_action = reactive(rv$subset_action),
         dataset_subset = reactive({
           rv[["dataset_subset"]]
         }),

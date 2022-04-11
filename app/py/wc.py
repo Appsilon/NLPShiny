@@ -3,6 +3,9 @@ import sys
 import pandas as pd
 import re
 import matplotlib.pyplot as plt
+from matplotlib import cm
+from matplotlib.colors import ListedColormap
+import numpy as np
 
 from nltk import word_tokenize 
 from nltk.util import ngrams
@@ -59,10 +62,12 @@ words_dict = dict(words_freq)
 WC_height = 1000
 WC_width = 1500
 WC_max_words = 200
+viridisBig = cm.get_cmap('viridis', 512)
+newcmp = ListedColormap(viridisBig(np.linspace(0.25, 0.75, 256)))
 wordCloud = WordCloud(background_color='white',max_words=WC_max_words, height=WC_height, width=WC_width,stopwords=new_stop)
 wordCloud.generate_from_frequencies(words_dict)
-plt.title('Most frequently occurring bigrams connected by same colour and font size')
-plt.imshow(wordCloud, interpolation='bilinear')
+#plt.imshow(wordCloud, interpolation='bilinear')
+plt.imshow(wordCloud.recolor( colormap= newcmp , random_state=17), interpolation="bilinear")
 plt.axis("off")
 
 wordCloud.to_file(wordcloud_fig_file)
