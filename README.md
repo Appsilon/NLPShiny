@@ -66,10 +66,10 @@ repository, see above. In the notebook, the accepted model is SVC
 -   module form, for adding entries to mongodb in real time
 -   Third page with workflow (How to)
 -   rhino/box (integrate with rhino repository)
+-   module wordcloud
 
 ### What is missing ?
 
--   module wordcloud
 -   translation for classifying Africa community feedback (english)
 -   video for Shiny Conference
 
