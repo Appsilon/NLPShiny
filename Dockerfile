@@ -42,7 +42,6 @@ RUN [ "python3", "-c", "import nltk; nltk.download('stopwords')" ]
 RUN [ "python3", "-c", "import nltk; nltk.download('punkt')" ]
 RUN cp -r /root/nltk_data /usr/local/share/nltk_data
 
-#RUN R -q -e "install.packages('renv',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 ENV RENV_VERSION 0.15.4
 RUN R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
 RUN R -e "remotes::install_github('rstudio/renv@${RENV_VERSION}')"
@@ -58,13 +57,9 @@ WORKDIR /home/app
 COPY .Rprofile .Rprofile
 COPY renv.lock renv.lock
 COPY renv/* renv/
-RUN chown app:app -R /usr/local/lib/R/site-library
 RUN chown app:app -R /home/app
 USER app
 RUN R -e 'renv::restore()'
 COPY . .
 EXPOSE 8080
 CMD ["R", "-e", "shiny::runApp('/home/app')"]
-
-
-
