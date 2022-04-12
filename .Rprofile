@@ -1,5 +1,5 @@
 # options(renv.settings.ignored.packages(c("codetools","rmarkdown","tinytex")) )
-renv::settings$ignored.packages(c("codetools","rmarkdown","tinytex"), persist = TRUE)
+# renv::settings$ignored.packages(c("codetools","rmarkdown","tinytex"), persist = TRUE)
 
 # this might impact docker and .github in opposite ways
 # options(renv.settings.use.cache(FALSE) )
