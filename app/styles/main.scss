@@ -199,8 +199,6 @@ element.style {
   grid-template-columns: 300px 1fr;
   grid-template-areas: "downleft downright";
   height: 5vh;
-
-  /* max-width: calc(100vw - 320px); */
   padding: 5px 0 0 5px;
   position: relative;
 }
@@ -213,12 +211,8 @@ element.style {
 .downright {
   grid-area: downright;
   margin: 10px 10px 0;
-
-  /* max-width: 95vw; */
   max-height: 35vh;
   width: 64.5vw;
-
-  /*  padding: 10px 10px 0; */
 }
 
 .parent {

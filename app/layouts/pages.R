@@ -89,10 +89,10 @@ howto_page <- function(map_ns) {
   ),
   div(
     class = "grid-mini-1-up",
-      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
+      segment(style="margin: 20px 5px 0; padding:12px 20px 0 20px;",
         card1
       ),
-      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
+      segment(style="margin: 20px 5px 0; padding:12px 20px 0 20px;",
               #
               #     ns call
               #
@@ -101,26 +101,43 @@ howto_page <- function(map_ns) {
     ),
   div(
     class = "grid-mini-1-down",
-    segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
+    segment(style="margin: 20px 5px 0; padding:12px 20px 0 20px;",
             card3
     ),
-    segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
-            card4
+    div(style="height:5vh;margin: 0px 5px 0; padding:20px 10px 0 10px;",
+      semanticPage(
+        tabset(id = "mini_tabset",
+               tabs = list(
+                 list(menu = "Feedback table",
+                      content =
+                        div(style ="height: 12vh;min-height: 190px;padding-top:5px;",
+                        card4
+                        )
+                 ),
+                 list(menu = "Word Cloud",
+                      content =
+                        div(style ="height: 12vh;min-height: 190px;padding-top:5px;",
+                            card_wordcloud
+                        )
+                 )
+               )
+        )
+      )
+     )
     )
-  )
   ),
   tagList(
     div(style="margin-left:5px;",
-      h4("2nd page: Database")
+      h4("Second page: Database")
     ),
     div(
       div(class="grid-mini-2-up",
-      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
+      segment(style="margin: 20px 5px 0; padding:12px 20px 0 20px;",
               card5
       )
       ),
       div(class="grid-mini-2-down",
-      segment(style="margin: 20px 5px 0; padding:20px 10px 0 10px;",
+      segment(style="margin: 20px 5px 0; padding:12px 20px 0 20px;",
               card6
       )
       )

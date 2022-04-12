@@ -1,7 +1,6 @@
 box::use(
-  shiny.fluent[Text,  Stack],
-  shiny[tagList, div, img, NS],
-  shiny.fluent[IconButton.shinyInput, Text, CommandBar],
+  shiny.fluent[Text,  Stack, IconButton.shinyInput, CommandBar],
+  shiny[tagList, div, img, NS, strong, br],
 )
 
 box::use(
@@ -11,15 +10,18 @@ box::use(
 #' @export
 card1 <- div(
   Stack(
-    tokens = list(childrenGap = 5),
-    Text(
-      variant = "xLarge",
+    tokens = list(childrenGap = 0),
+    strong(
       "Filter feedback database",
-      block = F
     ),
+    br(),
     Text(
       "Module: filter"
     ),
+    br()
+  ),
+  Stack(
+    tokens = list(childrenGap = 5),
     Text(
       "Here you can choose"
     ),
@@ -40,12 +42,11 @@ card2 <- function(id) {
   ns <-NS(id)
   div(
   Stack(
-    tokens = list(childrenGap = 5),
-    Text(
-      variant = "xLarge",
+    tokens = list(childrenGap = 0),
+    strong(
       "Map of selected feedback",
-      block = F
     ),
+    br(),
     Text(
       "Module: Map"
     ),
@@ -58,11 +59,10 @@ card2 <- function(id) {
 card3 <- div(
   Stack(
     tokens = list(childrenGap = 5),
-    Text(
-      variant = "xLarge",
+    strong(
       "Tag & Subset",
-      block = F
     ),
+    br(),
     Text(
       "Module: tag"
     ),
@@ -83,11 +83,6 @@ card4 <- div(
   Stack(
     tokens = list(childrenGap = 5),
     Text(
-      variant = "xLarge",
-      "Feedback table",
-      block = F
-    ),
-    Text(
       "Module: table"
     ),
     Text(
@@ -100,14 +95,29 @@ card4 <- div(
 )
 
 #' @export
-card5 <- div(
+card_wordcloud <- div(
   Stack(
     tokens = list(childrenGap = 5),
     Text(
-      variant = "xLarge",
-      "Input form",
-      block = F
+      "Module: wordcloud"
     ),
+    Text(
+      "- Create a wordcloud for dataset"
+    ),
+    Text(
+      "- Create a wordcloud for the subset (use subset first)"
+    )
+  )
+)
+
+#' @export
+card5 <- div(
+  Stack(
+    tokens = list(childrenGap = 5),
+    strong(
+      "Input form",
+    ),
+    br(),
     Text(
       "Module: form"
     ),
@@ -124,11 +134,10 @@ card5 <- div(
 card6 <- div(
   Stack(
     tokens = list(childrenGap = 5),
-    Text(
-      variant = "xLarge",
+    strong(
       "Action buttons",
-      block = F
     ),
+    br(),
     Text(
       "Module: form"
     ),
