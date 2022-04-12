@@ -1,3 +1,10 @@
+# options(renv.settings.ignored.packages(c("codetools","rmarkdown","tinytex")) )
+renv::settings$ignored.packages(c("codetools","rmarkdown","tinytex"), persist = TRUE)
+
+# options(renv.settings.use.cache(FALSE) )
+# renv::settings$use.cache(FALSE, persist = T)
+
+# Allow absolute module imports (relative to the app root).
 if (file.exists("renv")) {
   source("renv/activate.R")
 } else {
@@ -5,5 +12,4 @@ if (file.exists("renv")) {
   message("No 'renv' directory found; renv won't be activated.")
 }
 
-# Allow absolute module imports (relative to the app root).
 options(box.path = getwd())

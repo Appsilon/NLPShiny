@@ -6,6 +6,7 @@
 
 *   Installation for Mac users: https://docs.docker.com/docker-for-mac/
 *   Installation for Ubuntu users: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+*   Log out and log in, or restart
 
 #### 2. Configure gcloud in browser
 

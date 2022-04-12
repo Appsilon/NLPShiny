@@ -4,3 +4,7 @@ app/mongo/mongo_secret.R
 README.Rmd
 .Renviron
 app/outfiles/
+ignore/
+.rhino/
+node_modules/
+yarn.lock

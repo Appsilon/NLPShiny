@@ -69,7 +69,3 @@ jobs:
         shell: Rscript {0}
         run: rhino::lint_sass()
 
-      - name: Run R unit tests
-        if: always()
-        shell: Rscript {0}
-        run: rhino::test_r()
