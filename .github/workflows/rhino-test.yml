@@ -34,14 +34,10 @@ jobs:
         with:
           r-version: ${{ env.R_VERSION }}
 
-      - name: Restore renv from cache
-        uses: actions/cache@v2
-        env:
-          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ env.R_VERSION }}
-        with:
-          path: renv/library
-          key: ${{ env.CACHE_KEY }}-${{ hashFiles('renv.lock') }}
-          restore-keys: ${{ env.CACHE_KEY }}-
+      - name: Install renv
+        shell: Rscript {0}
+        run: |
+          install.packages("renv")
 
       - name: Sync renv with lockfile
         shell: Rscript {0}
