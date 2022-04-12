@@ -29,30 +29,25 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y libssl-dev libsasl2-dev
 
-      - name: Set RENV_PATHS_ROOT
-        shell: bash
-        run: |
-          echo "RENV_PATHS_ROOT=${{ runner.temp }}/renv" >> $GITHUB_ENV
-
-      - name: Install and activate renv
-        run: |
-          install.packages("renv")
-          renv::activate()
-        shell: Rscript {0}
-
-      - name: Get R and OS version
-        id: get-version
-        run: |
-          cat("##[set-output name=os-version;]", sessionInfo()$running, "\n", sep = "")
-          cat("##[set-output name=r-version;]", R.Version()$version.string, sep = "")
-        shell: Rscript {0}
-
-      - name: Restore Renv package cache
-        uses: actions/cache@v3
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v1
         with:
-          path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ steps.get-version.outputs.os-version }}-${{ steps.get-version.outputs.r-version }}-${{ inputs.cache-version }}-${{ hashFiles('renv.lock') }}
-          restore-keys: ${{ steps.get-version.outputs.os-version }}-${{ steps.get-version.outputs.r-version }}-${{inputs.cache-version }}-
+          r-version: ${{ env.R_VERSION }}
+
+      - name: Restore renv from cache
+        uses: actions/cache@v2
+        env:
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ env.R_VERSION }}
+        with:
+          path: renv/library
+          key: ${{ env.CACHE_KEY }}-${{ hashFiles('renv.lock') }}
+          restore-keys: ${{ env.CACHE_KEY }}-
+
+      - name: Sync renv with lockfile
+        shell: Rscript {0}
+        run: |
+          options(renv.config.cache.symlinks = FALSE)
+          renv::restore(clean = TRUE)
 
       - name: Setup Node
         uses: actions/setup-node@v2
