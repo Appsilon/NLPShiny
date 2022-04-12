@@ -41,7 +41,6 @@ jobs:
         with:
           path: renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles('renv.lock') }}
-          restore-keys: ${{ env.CACHE_KEY }}-
 
       - name: Sync renv with lockfile
         shell: Rscript {0}
