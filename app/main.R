@@ -19,6 +19,7 @@ box::use(
   app / mongo / mongo_fun[...],
   app / logic / functions_NLP[...],
   app / objects / objects_NLP[...],
+  app / objects / init[...],
 )
 
 box::use(
@@ -31,13 +32,6 @@ box::use(
   app / view / unify,
   app / view / howto_map,
   app / view / form,
-)
-
-dataset_init <- basic_colombia()
-
-write.csv(tolower(dataset_init[, "feedback"]),
-          "app/outfiles/selection.csv",
-          row.names = T
 )
 
 router <- purrr::lift(make_router)(pages_menu)

@@ -3,7 +3,6 @@ box::use(
 )
 
 box::use(
-  # app / mongo / mongo_secret[...],
   app / logic / functions_NLP[...],
   app / objects / objects_NLP[...]
 )
@@ -27,8 +26,6 @@ basic_colombia <- function() {
   database_name <- "kujakuja"
 
   db_col <- connectdb(collection_name, database_name)
-
-  center_init <- "Cundinamarca"
 
   find_string <- paste(
     "{\"service_type\":{\"$in\" : [\"Healthcare\",\"Cash Transfer\"] },",
@@ -59,14 +56,24 @@ basic_africa <- function() {
     db_afr <- connectdb(collection_name, database_name)
   }
 
+  africa_country_input <- "Rwanda"
+  center_input <- "Gihembe Camp"
+
   find_string <- paste0(
-    '{"country_name":"', input$africa_country_input, '"',
-    ', "location_name":"', input$center_input, '"}'
+    "{",
+    "\"country_name\":\"", africa_country_input, "\"",
+    ",",
+    "\"location_name\":\"", center_input, "\"",
+    ",",
+    "\"satisfied\":false",
+    "}"
   )
+
   dataset <- read_data(
-    db_afr, find_string, input$max_input,
-    paste0('{\"$natural\":', input$old_new_input, "}")
+    db_afr, find_string, 1500,
+    paste0('{\"$natural\":', -1, "}")
   )
+
   dataset <- africa_coord_date(dataset)
 
   #
@@ -84,10 +91,7 @@ connectdb <- function(collection_name, database_name) {
       url = sprintf(
         "mongodb+srv://%s:%s@%s/%s%s",
         Sys.getenv("MONGO_USERNAME"),
-        # options.mongodb$username,
         Sys.getenv("MONGO_PASSWORD"),
-        # options.mongodb$password,
-        # options.mongodb$host,
         Sys.getenv("MONGO_HOST"),
         database_name,
         "?sockettimeoutms=1200000"

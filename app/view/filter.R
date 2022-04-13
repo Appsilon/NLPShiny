@@ -65,7 +65,9 @@ ui <- function(id) {
       tagList(
         div(
           style = style_top,
-          selectInput(ns("region_input"), "Region", c("Colombia" = 1, "Africa" = 2))
+          selectInput(ns("region_input"), "Region", c("Colombia" = 1, "Africa" = 2),
+                      selected = 2
+                      )
         ),
         div(
           conditionalPanel(
@@ -386,6 +388,7 @@ server <- function(id) {
           rv$lat <- col_states_coord[which(col_states_coord$state %in% input$center_input), ]$lat
 
           rv$lng <- col_states_coord[which(col_states_coord$state %in% input$center_input), ]$lng
+
         } else {
           collection_name <- "africa_big"
           database_name <- "kujakuja"

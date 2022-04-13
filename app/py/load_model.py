@@ -18,7 +18,7 @@ def read_pickle_file(file):
 clf_model  = read_pickle_file(model)
 count_vect = read_pickle_file(count)
 
-series = pd.read_csv(series, index_col = 0, squeeze = True)
+series = pd.read_csv(series, index_col = 0).squeeze("columns")
 
 def predict():
     return clf_model.predict(count_vect.transform(series)) 

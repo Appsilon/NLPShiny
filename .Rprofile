@@ -1,11 +1,3 @@
-# options(renv.settings.ignored.packages(c("codetools","rmarkdown","tinytex")) )
-# renv::settings$ignored.packages(c("codetools","rmarkdown","tinytex"), persist = TRUE)
-
-# this might impact docker and .github in opposite ways
-# options(renv.settings.use.cache(FALSE) )
-# renv::settings$use.cache(FALSE, persist = T)
-
-# Allow absolute module imports (relative to the app root).
 if (file.exists("renv")) {
   source("renv/activate.R")
 } else {

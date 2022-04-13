@@ -27,9 +27,9 @@ server <- function(id, dataset_init, vars_filter,
                    vars_wordcloud) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
-    center_init <- "Cundinamarca"
-    lng1 <- col_states_coord[which(col_states_coord$state %in% center_init), ]$lng
-    lat1 <- col_states_coord[which(col_states_coord$state %in% center_init), ]$lat
+
+    lat1 <- afr_locations_coord[which(afr_locations_coord$location_name %in% "Gihembe Camp"), ]$lat
+    lng1 <- afr_locations_coord[which(afr_locations_coord$location_name %in% "Gihembe Camp"), ]$lng
 
     values <- reactiveValues(
       dataset = dataset_init,
@@ -97,7 +97,7 @@ server <- function(id, dataset_init, vars_filter,
           values$subset
         }),
         region = reactive({
-          values$region
+          as.numeric(values$region)
         }),
         lat = reactive({
           values$lat

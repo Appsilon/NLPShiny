@@ -33,16 +33,27 @@ ui <- function(id) {
   split_layout(cell_widths= "350px",
                style = "background:#FFFFFF;",
                tagList(
-                 uiOutput(ns("wordcloud_ui")),
+                 div(
+                   actionButton(ns("wc_button"), "Generate", icon("cloud"),
+                                style="color: #fff; background-color: #337ab7; border-color: #2e6da4; width:265px;"
+                   )
+                 ),
                  br(),
                  div(class="drop-container",
                      uiOutput(ns("wordcloud_select_ui"))
                  ),
                  br(),
-                 uiOutput(ns("wordcloud_select_button_ui"))
+                 div(
+                   actionButton(ns("trigram_subset_button"), "Filter by trigram"
+                                , icon("table"),
+                                style="color: #fff; background-color: #337ab7; border-color: #2e6da4; width:265px;"
+                   )
+                 )
                ),
                div(style="max-width:400px;",
-                   uiOutput(ns("wc_image_ui"))
+                   segment(
+                     imageOutput(ns("my_image"), height="300px")
+                   )
                )
   )
 }
@@ -57,40 +68,16 @@ server <- function(id, vars_unify, dataset_init) {
 
     rv <- reactiveValues(dataset=dataset_init)
 
-    output$wordcloud_ui <- renderUI({
-      div(
-        actionButton(ns("wc_button"), "Generate", icon("cloud"),
-                     style="color: #fff; background-color: #337ab7; border-color: #2e6da4; width:265px;"
-        )
-      )
-    })
-    output$wc_image_ui <- renderUI({
-      segment(
-        imageOutput(ns("my_image"), height="300px")
-      )
-    })
-
-    outputOptions(output, "wc_image_ui", suspendWhenHidden=F)
-
     #
-    #  trigram select
+    # create word cloud jpg
     #
+    jpeg_file <- reactiveFileReader(1000, session, "app/outfiles/word_cloud.jpg", readJPEG)
 
-    output$wordcloud_select_button_ui<- renderUI({
-      div(
-        actionButton(ns("trigram_subset_button"), "Filter by trigram"
-                     , icon("table"),
-                     style="color: #fff; background-color: #337ab7; border-color: #2e6da4; width:265px;"
-        )
-      )
-
-    })
+    initial_region <- 2
 
     if (file.exists("app/outfiles/selection.csv")) {
-      system(paste(script_string, language_vec[1]))
+      system(paste(script_string, language_vec[initial_region]))
     }
-
-    jpeg_file <- reactiveFileReader(1000, session, "app/outfiles/word_cloud.jpg", readJPEG)
 
     output$my_image <- renderImage({
       jpeg_file()
@@ -120,7 +107,7 @@ server <- function(id, vars_unify, dataset_init) {
     #
     ##########################################
 
-    observeEvent(c(vars_unify$dataset_whole(),
+    observeEvent(c(#vars_unify$dataset_whole(),
                    vars_unify$subset()
     ), {
       updateSelectInput(session,
@@ -130,10 +117,13 @@ server <- function(id, vars_unify, dataset_init) {
       )
     })
 
-    observeEvent(input$wc_button, {
-      #
-      #  initial dataset
-      #
+    observeEvent(c(input$wc_button,
+                   vars_unify$dataset_whole()
+                   ),
+                 ignoreInit = T, {
+
+      enable("trigram_input")
+
       rv$dataset <- vars_unify$dataset()
 
       if (file.exists("app/outfiles/selection.csv")) {
@@ -147,8 +137,6 @@ server <- function(id, vars_unify, dataset_init) {
       }
 
       rv$word_freq <- setDF(fread("app/outfiles/word_freq.csv"))
-
-      enable("trigram_input")
 
       updateSelectInput(session,
                         "trigram_input",

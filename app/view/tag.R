@@ -43,6 +43,15 @@ ui <- function(id) {
     )
   )
 }
+
+cash_spanish <- "app/pkl/model_SVC.pkl app/pkl/tfidf_cash.pkl"
+cash_english <- "app/pkl/model_SVCE.pkl app/pkl/tfidf_cash_english.pkl"
+cash_strings <- c(cash_spanish, cash_english)
+
+health_spanish <- "app/pkl/model_SVH.pkl app/pkl/tfidf_health.pkl"
+health_english <- "app/pkl/model_SVHE.pkl app/pkl/tfidf_health_english.pkl"
+health_strings <- c(health_spanish, health_english)
+
 #' @export
 server <- function(id,
                    vars_unify) {
@@ -52,12 +61,21 @@ server <- function(id,
     rv <- reactiveValues(tag_active = 0)
 
     observeEvent(input$tag_button, ignoreInit = T, {
+
       if (file.exists("app/outfiles/cash_df.csv")) {
         file.remove("app/outfiles/cash_df.csv")
       }
 
       if (file.exists("app/outfiles/health_df.csv")) {
         file.remove("app/outfiles/health_df.csv")
+      }
+
+      if (file.exists("app/outfiles/cash_out.txt")) {
+        file.remove("app/outfiles/cash_out.txt")
+      }
+
+      if (file.exists("app/outfiles/health_out.txt")) {
+        file.remove("app/outfiles/health_out.txt")
       }
 
       disable("tag_button")
@@ -74,7 +92,11 @@ server <- function(id,
 
       if (nrow(cash_df) > 0) {
         write.csv(cash_df, "app/outfiles/cash_df.csv", row.names = T)
-        system("python3 app/py/load_model.py app/pkl/model_SVC.pkl app/pkl/tfidf_cash.pkl app/outfiles/cash_df.csv app/outfiles/cash_out.txt")
+
+        system(paste("python3 app/py/load_model.py",
+                     cash_strings[vars_unify$region()],
+                     "app/outfiles/cash_df.csv app/outfiles/cash_out.txt"))
+
         cash_tags <- readLines("app/outfiles/cash_out.txt")
 
         if (!"nlp_tag" %in% colnames(dataset)) {
@@ -91,7 +113,11 @@ server <- function(id,
 
       if (nrow(health_df) > 0) {
         write.csv(health_df, "app/outfiles/health_df.csv", row.names = T)
-        system("python3 app/py/load_model.py app/pkl/model_SVH.pkl app/pkl/tfidf_health.pkl app/outfiles/health_df.csv app/outfiles/health_out.txt")
+
+        system(paste("python3 app/py/load_model.py",
+                     health_strings[vars_unify$region()],
+                     "app/outfiles/health_df.csv app/outfiles/health_out.txt"))
+
         health_tags <- readLines("app/outfiles/health_out.txt")
 
         if (!"nlp_tag" %in% colnames(dataset)) {

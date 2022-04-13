@@ -30,7 +30,7 @@ else :
     keep=["no","not","without","nor","little","very","much","against","more"]
     new_stop = [stop_eng for stop_eng in stop_eng if stop_eng not in keep]
     
-text = pd.read_csv(series, index_col = 0, squeeze = True, nrows=500)
+text = pd.read_csv(series, index_col = 0, nrows=500).squeeze("columns")
 
 big_list=[]
 for line in text:

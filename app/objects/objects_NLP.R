@@ -1,5 +1,5 @@
 box::use(
-  data.table[setDF, fread]
+  data.table[setDF, fread],
 )
 
 #####################################

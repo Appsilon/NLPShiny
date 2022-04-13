@@ -43,21 +43,22 @@ server <- function(id, dataset_init, idx,
                    vars_unify) {
   moduleServer(id, function(input, output, session) {
     output$map <- renderLeaflet({
-      center_init <- "Cundinamarca"
 
       types_in_dataset <- sort(unique(dataset_init$service_type))
+
+      initial_region <- 2
 
       idx <- sapply(
         types_in_dataset,
         function(x) {
           grep(x,
-            ser_list[[1]],
+            ser_list[[initial_region]],
             ignore.case = TRUE
           )
         }
       )
 
-      filtered_service <- ser_list[[1]][idx]
+      filtered_service <- ser_list[[initial_region]][idx]
 
       filter_color <- color_list12[idx]
 
@@ -68,8 +69,8 @@ server <- function(id, dataset_init, idx,
 
       js_functions2 <- js_functions[idx]
 
-      lng1 <- col_states_coord[which(col_states_coord$state %in% center_init), ]$lng
-      lat1 <- col_states_coord[which(col_states_coord$state %in% center_init), ]$lat
+      lat1 <- afr_locations_coord[which(afr_locations_coord$location_name %in% "Gihembe Camp"), ]$lat
+      lng1 <- afr_locations_coord[which(afr_locations_coord$location_name %in% "Gihembe Camp"), ]$lng
 
       build_map(dataset_init, lng1, lat1, js_functions2, pal)
     }) # output map
