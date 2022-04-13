@@ -9,6 +9,10 @@ box::use(
 #' @export
 dataset_init <- basic_africa()
 
+if (!dir.exists("app/outfiles")) {
+  dir.create("app/outfiles")
+}
+
 if (file.exists("app/outfiles/selection.csv")) {
   file.remove("app/outfiles/selection.csv")
 }
