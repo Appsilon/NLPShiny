@@ -101,6 +101,8 @@ server <- function(id, vars_unify, dataset_init) {
       )
     })
 
+    outputOptions(output, "wordcloud_select_ui", suspendWhenHidden=F)
+
     ##########################################
     #
     #  Observer calling python script    #
