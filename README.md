@@ -39,10 +39,12 @@ This way NGOs can attend and prioritize solutions for communities.
 
 ##### Which model is used and how?
 
-The python model is precomputed, saved in .pkl files, see folder `pkl`,
-and loaded by python scripts in folder `py`, from a call in the R module
-`tag`. The pertinent python notebook developed in group is on the gitlab
-repository, see above. In the notebook, the accepted model is SVC
+There are models for the services: Healthcare (Africa and Colombia) and
+Cash Transfer (Colombia). The python model is precomputed, saved in .pkl
+files, see folder `pkl`, and loaded by python scripts in folder `py`,
+from a call in the R module `tag`. The pertinent python notebook
+developed in group is on the gitlab repository, see above. In the
+notebook, the accepted model is SVC
 
 ##### Where is python?
 
@@ -67,10 +69,11 @@ repository, see above. In the notebook, the accepted model is SVC
 -   Third page with workflow (How to)
 -   rhino/box (integrate with rhino repository)
 -   module wordcloud
+-   translation for building model for Africa community feedback
+    (english)
 
 ### What is missing ?
 
--   translation for classifying Africa community feedback (english)
 -   video for Shiny Conference
 
 ### Personal objectives
