@@ -8,3 +8,4 @@ ignore/
 .rhino/
 node_modules/
 yarn.lock
+.ipynb_checkpoints/
