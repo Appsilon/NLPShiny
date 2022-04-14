@@ -114,7 +114,7 @@ read_data <- function(connection, find_string, mylimit, mysort) {
 
 ######################################################################
 #
-# used 1 time for uploading data to mongodb !!!
+# uploading data to mongodb !!!
 #
 ######################################################################
 
@@ -124,9 +124,9 @@ save_data <- function(data, collection_name, database_name) {
     collection = collection_name,
     url = sprintf(
       "mongodb+srv://%s:%s@%s/%s",
-      options.mongodb$username,
-      options.mongodb$password,
-      options.mongodb$host,
+      Sys.getenv("MONGO_USERNAME"),
+      Sys.getenv("MONGO_PASSWORD"),
+      Sys.getenv("MONGO_HOST"),
       database_name
     )
   ), error = function(e) {

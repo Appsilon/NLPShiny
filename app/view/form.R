@@ -28,6 +28,7 @@ box::use(
 )
 
 box::use(
+  app / mongo / mongo_fun[...],
   app / logic / functions_NLP[...],
 )
 
