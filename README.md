@@ -71,10 +71,12 @@ notebook, the accepted model is SVC
 -   module wordcloud
 -   translation for building model for Africa community feedback
     (english)
-
-### What is missing ?
-
 -   video for Shiny Conference
+
+### What is next ?
+
+-   test parquet
+-   module tests
 
 ### Personal objectives
 
