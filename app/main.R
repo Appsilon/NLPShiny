@@ -1,4 +1,3 @@
-# R packages
 box::use(
   shiny[
     moduleServer, NS,
@@ -36,8 +35,13 @@ box::use(
 
 router <- purrr::lift(make_router)(pages_menu)
 
+#
+#   ui function
+#
 #' @export
 ui <- function(id) {
+  ns <- NS(id)
+  # see pages.R for ns for shiny.router
   fluidPage(
     useShinyjs(),
     shiny::tags$body(
