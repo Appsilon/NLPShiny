@@ -120,7 +120,7 @@ server <- function(id, vars_unify, dataset_init) {
     })
 
     observeEvent(c(input$wc_button,
-                   vars_unify$dataset_whole()
+                   vars_unify$dataset_whole() # submit filter action
                    ),
                  ignoreInit = T, {
 

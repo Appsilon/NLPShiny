@@ -43,7 +43,7 @@ server <- function(id, dataset_init, vars_filter,
     )
 
     observe({
-      values[["dataset_whole"]] <- values[["dataset"]] <- vars_filter$dataset()
+      values[["ds_map"]] <- values[["dataset_whole"]] <- values[["dataset"]] <- vars_filter$dataset()
       values[["region"]] <- vars_filter$region()
       values[["lat"]] <- vars_filter$lat()
       values[["lng"]] <- vars_filter$lng()
@@ -61,19 +61,19 @@ server <- function(id, dataset_init, vars_filter,
     }) |> bindEvent(vars_tag$tag_active(), ignoreInit = T)
 
     observe({
-      values[["dataset"]] <- vars_cash$dataset_subset()
-      values[["subset"]] <- values[["subset"]]+1
+      values[["ds_map"]] <- values[["dataset"]] <- vars_cash$dataset_subset()
+      values[["subset"]]  <- values[["subset"]] + 1
       disable("app-ns_wordcloud-trigram_subset_button", asis = T)
     }) |> bindEvent(vars_cash$subset_action(), ignoreInit = T)
 
     observe({
-      values[["dataset"]] <- vars_health$dataset_subset()
-      values[["subset"]] <- values[["subset"]]+1
+      values[["ds_map"]] <- values[["dataset"]] <- vars_health$dataset_subset()
+      values[["subset"]]  <- values[["subset"]] + 1
       disable("app-ns_wordcloud-trigram_subset_button", asis = T)
     }) |> bindEvent(vars_health$subset_action(), ignoreInit = T)
 
     observe({
-      values[["dataset"]] <- vars_wordcloud$dataset_trigram()
+      values[["ds_map"]] <- values[["dataset"]] <- vars_wordcloud$dataset_trigram()
     }) |> bindEvent(vars_wordcloud$dataset_trigram(), ignoreInit = T)
 
     return(
@@ -83,6 +83,9 @@ server <- function(id, dataset_init, vars_filter,
         }),
         dataset = reactive({
           values$dataset
+        }),
+        ds_map = reactive({
+          values$ds_map
         }),
         dataset_whole = reactive({
           values$dataset_whole

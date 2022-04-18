@@ -81,16 +81,16 @@ server <- function(id, dataset_init, idx,
     #
     ####################################
 
-      observeEvent(vars_unify$dataset(),
+      observeEvent(vars_unify$ds_map(),
         ignoreInit = T, {
           output$map <- renderLeaflet({
             validate(
               need(
-                try(inherits(vars_unify$dataset(), "data.frame")), ""
+                try(inherits(vars_unify$ds_map(), "data.frame")), ""
               )
             )
 
-            dataset <- vars_unify$dataset()
+            dataset <- vars_unify$ds_map()
 
             types_in_dataset <- sort(unique(dataset$service_type))
 
