@@ -5,6 +5,7 @@ NLP for community feedback <br> using modules, rhino and box
 
 ### App
 
+<https://nlp-kwwxur3qea-ew.a.run.app>  
 <https://nlp-kwwxur3qea-uc.a.run.app>
 
 ### Context
@@ -88,5 +89,6 @@ notebook, the accepted model is SVC
 
 ### Working app in cloudRun
 
--   <https://nlp-kwwxur3qea-uc.a.run.app>
+-   <https://nlp-kwwxur3qea-uc.a.run.app>,
+    <https://nlp-kwwxur3qea-ew.a.run.app>
 -   For details look at `cloudRun.md`
